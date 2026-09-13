@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 LaTeX Tools & Beamer Presentation Tutorial</title>
+    <style>
+        :root {
+            --primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            --code-font: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: var(--primary-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 700;
+        }
+
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; }
+        h3 { font-size: 1.4rem; }
+        h4 { font-size: 1.15rem; }
+
+        .text-center {
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dashed var(--border-color);
+            margin: 30px 0;
+        }
+
+        code {
+            font-family: var(--code-font);
+            background-color: rgba(27, 31, 35, 0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        pre {
+            margin: 0;
+            font-family: var(--code-font);
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            color: inherit;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table th, table td {
+            padding: 10px 12px;
+            vertical-align: top;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #2E86AB;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="text-center">📚 LaTeX Tools & Beamer Presentation Tutorial</h1>
+    <h2 class="text-center" style="border: none;"><em>SSTIA LaTeX Workshop 2026</em></h2>
+
+    <h2><span style="color: #2E86AB;">📦 Part 1: LaTeX Tools & VS Code Plugin Recommendations</span></h2>
+
+    <h3><span style="color: #A23B72;">🔧 1.1 Essential LaTeX Distributions</span></h3>
+
+    <div style="background-color: #E8F4F8; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h4><strong>🐧 TeX Live</strong> <span style="color: #06A77D;">✅ Recommended</span></h4>
+        <p><strong>Purpose</strong>: Complete LaTeX distribution with all packages included</p>
+        <p><strong>Usage</strong>:</p>
+        <ul>
+            <li>🔗 Download: <a href="https://www.tug.org/texlive/" target="_blank">https://www.tug.org/texlive/</a></li>
+            <li>Install via command line or GUI installer</li>
+            <li>Includes <code>pdflatex</code>, <code>xelatex</code>, <code>lualatex</code></li>
+        </ul>
+        <p><strong>✅ Pros</strong>:</p>
+        <ul>
+            <li>Comprehensive & cross-platform</li>
+            <li>Regularly updated</li>
+        </ul>
+        <p><strong>📦 Size</strong>: ~7GB full installation</p>
+    </div>
+
+    <div style="background-color: #FFF4E6; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h4><strong>🪟 MiKTeX</strong> <span style="color: #F18F01;">Windows-focused</span></h4>
+        <p><strong>Purpose</strong>: Lightweight LaTeX with on-demand package installation</p>
+        <p><strong>Usage</strong>:</p>
+        <ul>
+            <li>🔗 Download: <a href="https://miktex.org/" target="_blank">https://miktex.org/</a></li>
+            <li>Auto-installs missing packages</li>
+            <li>MiKTeX Console for management</li>
+        </ul>
+        <p><strong>✅ Pros</strong>:</p>
+        <ul>
+            <li>Smaller initial download</li>
+            <li>Windows-optimized</li>
+        </ul>
+        <p><strong>⚠️ Cons</strong>: Package installs can interrupt workflow</p>
+    </div>
+
+    <div style="background-color: #F0F8F0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+        <h4><strong>☁️ SJTU Overleaf</strong> <span style="color: #5B9BD5;">Online Alternative</span></h4>
+        <p><strong>Purpose</strong>: Cloud-based LaTeX editor (no local install)</p>
+        <p><strong>Usage</strong>:</p>
+        <ul>
+            <li>🔗 Visit: <a href="https://latex.sjtu.edu.cn/project" target="_blank">https://latex.sjtu.edu.cn/project</a></li>
+            <li>jAccount login & start writing</li>
+        </ul>
+        <p><strong>✅ Pros</strong>:</p>
+        <ul>
+            <li>No setup required</li>
+            <li>Real-time collaboration</li>
+            <li>Version history</li>
+        </ul>
+        <p><strong>⚠️ Cons</strong>: Requires internet, not convenient to see real-time modification (must recomplie again and takes long)</p>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #A23B72;">🔌 1.2 VS Code LaTeX Extensions</span></h3>
+
+    <div style="background: linear-gradient(135deg, #6c87ff 0%, #e4c8ff 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+        <h4 style="margin-top:0;"><strong>⭐ LaTeX Workshop</strong> <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">ESSENTIAL</span></h4>
+        <p style="margin-bottom:0;"><strong>Extension ID</strong>: <code>James-Yu.latex-workshop</code><br>
+        <strong>Purpose</strong>: Complete LaTeX development environment in VS Code</p>
+    </div>
+
+    <p><strong>🎯 Key Features</strong>:</p>
+
+    <table>
+        <tr>
+            <td bgcolor="#E8F5E9" width="50%">
+                <strong>🔄 Auto-compilation</strong><br>
+                Compiles on save automatically
+            </td>
+            <td bgcolor="#E3F2FD" width="50%">
+                <strong>📄 PDF Preview</strong><br>
+                Built-in preview with SyncTeX support
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF3E0">
+                <strong>🎨 Syntax Highlighting</strong><br>
+                Color-coded LaTeX commands
+            </td>
+            <td bgcolor="#F3E5F5">
+                <strong>💡 IntelliSense</strong><br>
+                Auto-completion for commands, citations
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FCE4EC" colspan="2">
+                <strong>⚡ Snippet Support</strong><br>
+                Quick insertion of common structures
+            </td>
+        </tr>
+    </table>
+
+    <p><strong>⚙️ Setup & Configuration</strong>:</p>
+
+    <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #4CAF50;">
+        <pre><code>// Add to settings.json (Ctrl+Shift+P → "Open User Settings (JSON)")
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  "latex-workshop.synctex.afterBuild.enabled": true
+}</code></pre>
+    </div>
+
+    <p style="margin-top: 15px;"><strong>📋 Common Commands</strong> (Access via Ctrl+Shift+P):</p>
+
+    <table style="border-collapse: collapse; width: 100%;">
+        <tr style="background-color: #4A90E2; color: white;">
+            <td style="padding: 10px;"><strong>Command</strong></td>
+            <td style="padding: 10px;"><strong>Description</strong></td>
+        </tr>
+        <tr style="background-color: #E8F4F8;">
+            <td style="padding: 8px;">🔨 <code>LaTeX Workshop: Build LaTeX project</code></td>
+            <td style="padding: 8px;">Manual compilation</td>
+        </tr>
+        <tr style="background-color: #F5F5F5;">
+            <td style="padding: 8px;">👁️ <code>LaTeX Workshop: View LaTeX PDF</code></td>
+            <td style="padding: 8px;">Open preview</td>
+        </tr>
+        <tr style="background-color: #E8F4F8;">
+            <td style="padding: 8px;">🔗 <code>LaTeX Workshop: SyncTeX from cursor</code></td>
+            <td style="padding: 8px;">Jump to PDF location</td>
+        </tr>
+        <tr style="background-color: #F5F5F5;">
+            <td style="padding: 8px;">🧹 <code>LaTeX Workshop: Clean up auxiliary files</code></td>
+            <td style="padding: 8px;">Remove .aux, .log files</td>
+        </tr>
+    </table>
+
+    <p><strong>⌨️ Useful Shortcuts</strong>:</p>
+
+    <div style="background: linear-gradient(to right, #FFC371, #FF5F6D); padding: 15px; border-radius: 8px; color: white;">
+        <ul style="margin: 0; padding-left: 20px;">
+            <li><code>Ctrl+Alt+B</code> - 🔨 Build LaTeX project</li>
+            <li><code>Ctrl+Alt+V</code> - 👁️ View PDF</li>
+            <li><code>Ctrl+Alt+J</code> - 🔗 SyncTeX from cursor (source → PDF)</li>
+            <li><code>Ctrl+Click</code> in PDF - ↩️ SyncTeX reverse (PDF → source)</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div style="background-color: #F0F8FF; padding: 15px; border-radius: 10px; border-left: 5px solid #4169E1; margin-bottom: 15px;">
+        <h4 style="margin-top: 0;"><strong>🛠️ LaTeX Utilities</strong> <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Enhanced Features</span></h4>
+        <ul>
+            <li><strong>Extension ID</strong>: <code>tecosaur.latex-utilities</code></li>
+            <li><strong>Purpose</strong>: Additional tools for LaTeX editing</li>
+        </ul>
+        <p><strong>Features</strong>:</p>
+        <ul>
+            <li>📊 Live word count in status bar</li>
+            <li>📋 Formatted paste (converts plain text to LaTeX)</li>
+            <li>📚 Zotero citation integration</li>
+            <li>🎨 TikZ preview support</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div style="background-color: #FFE4E1; padding: 15px; border-radius: 10px; border-left: 5px solid #DC143C; margin-bottom: 15px;">
+        <h4 style="margin-top: 0;"><strong>📄 PDF Preview</strong> <span style="background-color: #E0E0E0; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Alternative Viewer</span></h4>
+        <ul>
+            <li><strong>Extension ID</strong>: <code>tomoki1207.pdf</code></li>
+            <li><strong>Purpose</strong>: Simple PDF viewer for VS Code</li>
+            <li><strong>Usage</strong>: Click PDF files in Explorer to view in VS Code tab</li>
+            <li><strong>Note</strong>: LaTeX Workshop has built-in viewer, but this is useful for general PDF viewing</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #A23B72;">🛠️ 1.3 Additional Useful Tools</span></h3>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>📚 Zotero + Better BibTeX</strong></h4>
+                <p><strong>Purpose</strong>: Reference management and <code>.bib</code> file generation</p>
+                <p><strong>Usage</strong>:</p>
+                <ul>
+                    <li>📥 Install Zotero desktop app</li>
+                    <li>🔌 Install Better BibTeX plugin</li>
+                    <li>📤 Export collections as <code>.bib</code> files</li>
+                    <li>✍️ Use <code>\cite{}</code> commands with auto-completion in VS Code</li>
+                </ul>
+            </td>
+            <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>✏️ Detexify</strong></h4>
+                <p><strong>Purpose</strong>: Find LaTeX symbols by drawing</p>
+                <p><strong>Usage</strong>:</p>
+                <ul>
+                    <li>🌐 Visit <a href="http://detexify.kirelabs.org/classify.html" target="_blank">http://detexify.kirelabs.org/classify.html</a></li>
+                    <li>✏️ Draw symbol → Get LaTeX command</li>
+                </ul>
+                <div style="font-size: 2em; text-align: center; margin-top: 10px;">∫ ∑ ∞ ≈ ≠ ≤</div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF3E0" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>📊 TeXCount</strong></h4>
+                <p><strong>Purpose</strong>: Word count for LaTeX documents</p>
+                <p><strong>Usage</strong>:</p>
+                <ul>
+                    <li>💻 Command line tool, or use LaTeX Utilities extension</li>
+                    <li>🔢 Counts actual words, ignoring commands</li>
+                </ul>
+            </td>
+            <td bgcolor="#F3E5F5" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>🎨 Inkscape with TexText</strong></h4>
+                <p><strong>Purpose</strong>: Create complex diagrams with LaTeX labels</p>
+                <p><strong>Usage</strong>:</p>
+                <ul>
+                    <li>🖼️ Draw in Inkscape</li>
+                    <li>🔤 Add LaTeX formulas via TexText plugin</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2><span style="color: #2E86AB;">🎬 Part 2: Beamer Presentation Tutorial</span></h2>
+
+    <h3><span style="color: #D62828;">📖 2.1 What is Beamer?</span></h3>
+
+    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white; margin: 20px 0;">
+        <strong>Beamer</strong> is a LaTeX document class for creating presentations (slides). It produces PDF presentations that work on any platform without PowerPoint.
+    </div>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#D4EDDA" style="padding: 20px;">
+                <h3 style="margin-top:0;"><strong>✅ Advantages</strong></h3>
+                <ul>
+                    <li>📐 Professional typesetting (especially for math)</li>
+                    <li>🎯 Consistent formatting</li>
+                    <li>🔄 Version control friendly (plain text)</li>
+                    <li>💰 No licensing costs</li>
+                    <li>🎛️ Precise control over layout</li>
+                </ul>
+            </td>
+            <td width="50%" bgcolor="#CCE5FF" style="padding: 20px;">
+                <h3 style="margin-top:0;"><strong>📌 When to use Beamer</strong></h3>
+                <ul>
+                    <li>🔬 Academic presentations with equations</li>
+                    <li>💻 Technical talks with code</li>
+                    <li>🎓 Consistent multi-presenter conferences</li>
+                    <li>📋 Reproducible presentation templates</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">📝 2.2 Basic Beamer Structure</span></h3>
+
+    <h4><strong>💡 Minimal Example</strong></h4>
+
+    <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #FF6B6B;">
+        <pre><code>\documentclass{beamer}
+
+% Theme selection
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Title information
+\title{Your Presentation Title}
+\author{Your Name}
+\institute{Your Institution}
+\date{\today}
+
+\begin{document}
+
+% Title frame
+\frame{\titlepage}
+
+% Content frame
+\begin{frame}
+\frametitle{First Slide}
+This is your first slide content.
+\end{frame}
+
+\end{document}</code></pre>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🧩 2.3 Understanding Beamer Components</span></h3>
+
+    <h4><strong>⚙️ Document Class Options</strong></h4>
+
+    <div style="background-color: #FFF9E6; padding: 15px; border-radius: 8px; border-left: 5px solid #FFB800; margin-bottom: 15px;">
+        <pre><code style="color: #333;">\documentclass[
+  aspectratio=169,    % 16:9 ratio (default is 4:3)
+  10pt,               % Font size: 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+  handout,            % Removes overlays for handout printing
+  t                   % Align frame content to top (default: c=center, b=bottom)
+]{beamer}</code></pre>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr style="background-color: #4A90E2; color: white;">
+            <td style="padding: 10px;"><strong>Option</strong></td>
+            <td style="padding: 10px;"><strong>Purpose</strong></td>
+        </tr>
+        <tr style="background-color: #E8F4F8;">
+            <td style="padding: 8px;"><code>aspectratio=169</code></td>
+            <td style="padding: 8px;">🖥️ Modern widescreen format</td>
+        </tr>
+        <tr style="background-color: #F5F5F5;">
+            <td style="padding: 8px;"><code>10pt</code></td>
+            <td style="padding: 8px;">📏 Readable font size (11pt or 12pt for larger rooms)</td>
+        </tr>
+        <tr style="background-color: #E8F4F8;">
+            <td style="padding: 8px;"><code>handout</code></td>
+            <td style="padding: 8px;">🖨️ Creates printer-friendly version</td>
+        </tr>
+        <tr style="background-color: #F5F5F5;">
+            <td style="padding: 8px;"><code>t</code></td>
+            <td style="padding: 8px;">⬆️ Top alignment keeps content position consistent</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h4><strong>🎨 Themes and Appearance</strong></h4>
+
+    <div style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+        <strong>Theme Types: Customize Your Presentation Look</strong>
+    </div>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#FFE4E1" style="padding: 15px;">
+                <p><strong>1️⃣ Presentation Themes</strong> (overall look)</p>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\usetheme{Madrid}
+\usetheme{Berlin}
+\usetheme{Copenhagen}
+\usetheme{Singapore}
+\usetheme{default}</code></pre>
+                </div>
+                <p style="margin-top: 10px;">
+                    📍 Navigation bar at top<br>
+                    📂 Sidebar navigation<br>
+                    🔵 Blue header with navigation<br>
+                    ✨ Minimal theme<br>
+                    ⚪ Plain theme
+                </p>
+            </td>
+            <td width="50%" bgcolor="#E0F2F7" style="padding: 15px;">
+                <p><strong>2️⃣ Color Themes</strong> (color scheme)</p>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\usecolortheme{default}
+\usecolortheme{dolphin}
+\usecolortheme{rose}
+\usecolortheme{beaver}</code></pre>
+                </div>
+                <p style="margin-top: 10px;">
+                    🎨 Default colors<br>
+                    🐬 Blue tones<br>
+                    🌹 Pink/red tones<br>
+                    🦫 Gray and red
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div style="background-color: #D4EDDA; padding: 15px; border-radius: 8px; border-left: 5px solid #28A745; margin-top: 15px;">
+        <p><strong>💡 Popular Combination:</strong></p>
+        <pre><code style="color: #333;">\usetheme{Madrid}
+\usecolortheme{whale}</code></pre>
+        <p>Combination matrix (default mode): <a href="https://hartwork.org/beamer-theme-matrix/" target="_blank">https://hartwork.org/beamer-theme-matrix/</a></p>
+        <p><strong>Purpose</strong>:</p>
+        <ul>
+            <li><strong>Presentation themes</strong>: Define overall layout and navigation</li>
+            <li><strong>Color themes</strong>: Apply consistent color palette</li>
+            <li><strong>Inner/Outer themes</strong>: Customize specific elements</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h4><strong>📋 Title Frame Configuration</strong></h4>
+
+    <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
+        <pre><code>\title[Short Title]{Full Presentation Title That Can Be Long}
+\subtitle{Optional Subtitle}
+\author[Short Name]{Full Name \inst{1,2}}
+\institute[University]{
+  \inst{1} Department of Computer Science \\
+  University Name \\
+  \inst{2} Research Institute
+}
+\date[CONF 2026]{Conference Name, September 2026}</code></pre>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <tr style="background-color: #7B1FA2; color: white;">
+            <td style="padding: 10px;"><strong>Short forms (in brackets)</strong></td>
+            <td style="padding: 10px;"><strong>Purpose</strong></td>
+        </tr>
+        <tr style="background-color: #F3E5F5;">
+            <td style="padding: 8px;">📌 Appear in footer/header</td>
+            <td style="padding: 8px;">Throughout presentation</td>
+        </tr>
+        <tr style="background-color: #E1BEE7;">
+            <td style="padding: 8px;">✨ Keep navigation bar uncluttered</td>
+            <td style="padding: 8px;">Better readability</td>
+        </tr>
+        <tr style="background-color: #F3E5F5;">
+            <td style="padding: 8px;">📄 Long versions</td>
+            <td style="padding: 8px;">Appear only on title slide</td>
+        </tr>
+    </table>
+
+    <div style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; margin-top: 15px;">
+        <p><strong>Creating title slide</strong>:</p>
+        <pre><code style="color: #333;">\begin{frame}
+  \titlepage
+\end{frame}</code></pre>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🎯 2.4 Creating Content Frames</span></h3>
+
+    <h4><strong>📐 Basic Frame Structure</strong></h4>
+
+    <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}
+  \frametitle{Frame Title}
+  \framesubtitle{Optional Subtitle}
+  
+  Your content here.
+\end{frame}</code></pre>
+        </div>
+        <p style="margin-top: 10px;"><strong>Alternative syntax</strong> (with automatic title):</p>
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <pre><code>\begin{frame}{Frame Title}{Optional Subtitle}
+  Content here.
+\end{frame}</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h4><strong>🔒 Fragile Frames</strong> (for verbatim content)</h4>
+
+    <div style="background-color: #FFEBEE; padding: 15px; border-radius: 8px; border-left: 5px solid #F44336;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}[fragile]
+  \frametitle{Code Example}
+  
+  \begin{verbatim}
+    def hello_world():
+        print("Hello, World!")
+  \end{verbatim}
+\end{frame}</code></pre>
+        </div>
+        <p style="margin-top: 10px;"><strong>⚠️ Purpose</strong>: <code>[fragile]</code> option required when frame contains:</p>
+        <ul>
+            <li>✅ <code>\verb</code> or <code>verbatim</code> environments</li>
+            <li>💻 Code listings</li>
+            <li>🔤 Special characters that need literal interpretation</li>
+        </ul>
+        <p><strong>❌ Without <code>[fragile]</code></strong>: LaTeX compilation errors occur</p>
+    </div>
+
+    <hr>
+
+    <h4><strong>🎬 Plain Frames</strong> (no header/footer)</h4>
+
+    <div style="background-color: #E8EAF6; padding: 15px; border-radius: 8px; border-left: 5px solid #3F51B5;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}[plain]
+  \centering
+  \Huge Thank You!
+\end{frame}</code></pre>
+        </div>
+        <p style="margin-top: 10px;">
+            <strong>🎯 Purpose</strong>: Full-screen content without theme decorations<br>
+            <strong>📌 Use cases</strong>: Title slides, image-only slides, thank you slides
+        </p>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">📊 2.5 Structuring Content</span></h3>
+
+    <h4><strong>📝 Lists</strong></h4>
+
+    <div style="background-color: #F1F8E9; padding: 15px; border-radius: 8px; border-left: 5px solid #8BC34A;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Lists Example}
+  
+  \textbf{Itemize (bullets):}
+  \begin{itemize}
+    \item First point
+    \item Second point
+      \begin{itemize}
+        \item Nested point
+      \end{itemize}
+  \end{itemize}
+  
+  \textbf{Enumerate (numbers):}
+  \begin{enumerate}
+    \item First step
+    \item Second step
+  \end{enumerate}
+  
+\end{frame}</code></pre>
+        </div>
+        <p style="margin-top: 10px;"><strong>🎨 Customizing bullets</strong>:</p>
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <pre><code>\setbeamertemplate{itemize items}[circle]  % or [square], [triangle]
+\setbeamertemplate{enumerate items}[default]  % or [circle], [square]</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h4><strong>📐 Columns Layout</strong></h4>
+
+    <div style="background-color: #E1F5FE; padding: 15px; border-radius: 8px; border-left: 5px solid #03A9F4;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Two-Column Layout}
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Left column content:
+      \begin{itemize}
+        \item Point 1
+        \item Point 2
+      \end{itemize}
+    \end{column}
+    
+    \begin{column}{0.5\textwidth}
+      Right column content:
+      \includegraphics[width=\textwidth]{image.png}
+    \end{column}
+  \end{columns}
+  
+\end{frame}</code></pre>
+        </div>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="50%" bgcolor="#B3E5FC" style="padding: 15px;">
+                    <strong>🎯 Purpose</strong>:
+                    <ul>
+                        <li>Side-by-side content presentation</li>
+                        <li>Compare/contrast layouts</li>
+                        <li>Image alongside text</li>
+                    </ul>
+                </td>
+                <td width="50%" bgcolor="#81D4FA" style="padding: 15px;">
+                    <strong>⚙️ Options</strong>:
+                    <ul>
+                        <li><code>0.5\textwidth</code> = 50% width per column</li>
+                        <li><code>[T]</code> = Top align columns</li>
+                        <li><code>[c]</code> = Center align (default)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4><strong>📦 Blocks</strong> (Highlighted Sections)</h4>
+
+    <div style="background-color: #FFF8E1; padding: 15px; border-radius: 8px; border-left: 5px solid #FFC107;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Block Examples}
+  
+  \begin{block}{Block Title}
+    Standard block with theme colors.
+  \end{block}
+  
+  \begin{alertblock}{Warning}
+    Important alert (usually red).
+  \end{alertblock}
+  
+  \begin{exampleblock}{Example}
+    Example block (usually green).
+  \end{exampleblock}
+  
+\end{frame}</code></pre>
+        </div>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="33%" bgcolor="#E3F2FD" style="padding: 10px; text-align: center;">
+                    <strong>📘 block</strong><br>Standard block
+                </td>
+                <td width="33%" bgcolor="#FFEBEE" style="padding: 10px; text-align: center;">
+                    <strong>⚠️ alertblock</strong><br>Warning (red)
+                </td>
+                <td width="33%" bgcolor="#E8F5E9" style="padding: 10px; text-align: center;">
+                    <strong>✅ exampleblock</strong><br>Example (green)
+                </td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 10px;"><strong>🎨 Customization</strong>:</p>
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <pre><code>\setbeamercolor{block title}{bg=blue!20, fg=black}
+\setbeamercolor{block body}{bg=blue!5}</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">✨ 2.6 Overlays and Animations</span></h3>
+
+    <div style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+        <strong>Overlays reveal content progressively, creating animation effects in PDF.</strong>
+    </div>
+
+    <h4><strong>🎬 Basic Overlay Syntax</strong></h4>
+
+    <div style="background-color: #F3E5F5; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Overlay Basics}
+  
+  \begin{itemize}
+    \item&lt;1-&gt; Appears on slide 1 and after
+    \item&lt;2-&gt; Appears on slide 2 and after
+    \item&lt;3-&gt; Appears on slide 3 and after
+    \item&lt;1-2&gt; Appears only on slides 1-2
+    \item&lt;4&gt; Appears only on slide 4
+  \end{itemize}
+  
+\end{frame}</code></pre>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>📋 Overlay Specifications</strong>:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr style="background-color: #7B1FA2; color: white;">
+                <td style="padding: 10px;"><strong>Syntax</strong></td>
+                <td style="padding: 10px;"><strong>Effect</strong></td>
+            </tr>
+            <tr style="background-color: #F3E5F5;">
+                <td style="padding: 8px;"><code>&lt;n&gt;</code></td>
+                <td style="padding: 8px;">⚫ Appears only on slide n</td>
+            </tr>
+            <tr style="background-color: #E1BEE7;">
+                <td style="padding: 8px;"><code>&lt;n-&gt;</code></td>
+                <td style="padding: 8px;">➡️ Appears from slide n onwards</td>
+            </tr>
+            <tr style="background-color: #F3E5F5;">
+                <td style="padding: 8px;"><code>&lt;n-m&gt;</code></td>
+                <td style="padding: 8px;">↔️ Appears on slides n through m</td>
+            </tr>
+            <tr style="background-color: #E1BEE7;">
+                <td style="padding: 8px;"><code>&lt;-n&gt;</code></td>
+                <td style="padding: 8px;">⬅️ Appears up to slide n</td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Control when each element appears during presentation</p>
+    </div>
+
+    <hr>
+
+    <h4><strong>⏸️ Pause Command</strong> (Simple Sequential Reveals)</h4>
+
+    <div style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 5px solid #4CAF50;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Using Pause}
+  
+  First point appears immediately.
+  \pause
+  
+  Second point appears after click.
+  \pause
+  
+  \begin{itemize}
+    \item This list appears third
+    \item All items together
+  \end{itemize}
+  \pause
+  
+  Final content.
+  
+\end{frame}</code></pre>
+        </div>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="50%" bgcolor="#C8E6C9" style="padding: 15px;">
+                    <strong>✅ Purpose</strong>: Simplest way to create step-by-step reveals
+                </td>
+                <td width="50%" bgcolor="#FFCCBC" style="padding: 15px;">
+                    <strong>⚠️ Limitation</strong>: Less control than explicit overlay numbers
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4><strong>🎨 Alert and Emphasis</strong></h4>
+
+    <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Highlighting Content}
+  
+  \begin{itemize}
+    \item&lt;1-&gt; Regular item
+    \item&lt;2-&gt; \alert&lt;2&gt;{This is highlighted on slide 2}
+    \item&lt;3-&gt; \textbf&lt;3&gt;{Bold on slide 3, normal after}
+  \end{itemize}
+  
+  \onslide&lt;4-&gt;{
+    This paragraph appears from slide 4 onwards.
+  }
+  
+  \only&lt;5&gt;{
+    This text ONLY on slide 5, doesn't occupy space otherwise.
+  }
+  
+\end{frame}</code></pre>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>📊 Differences</strong>:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr style="background-color: #FF9800; color: white;">
+                <td style="padding: 10px;"><strong>Command</strong></td>
+                <td style="padding: 10px;"><strong>Behavior</strong></td>
+            </tr>
+            <tr style="background-color: #FFE0B2;">
+                <td style="padding: 8px;"><code>\alert&lt;n&gt;{text}</code></td>
+                <td style="padding: 8px;">🔴 Highlights in alert color on slide n</td>
+            </tr>
+            <tr style="background-color: #FFCC80;">
+                <td style="padding: 8px;"><code>\onslide&lt;n-&gt;{content}</code></td>
+                <td style="padding: 8px;">👁️ Shows content, reserves space when hidden</td>
+            </tr>
+            <tr style="background-color: #FFE0B2;">
+                <td style="padding: 8px;"><code>\only&lt;n&gt;{content}</code></td>
+                <td style="padding: 8px;">⚡ Shows content, no space reservation when hidden</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4><strong>🔬 Advanced: Overlay-Aware Commands</strong></h4>
+
+    <div style="background-color: #E0F2F1; padding: 15px; border-radius: 8px; border-left: 5px solid #009688;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Table of Contents with Highlights}
+  
+  \tableofcontents[pausesections]  % Highlight each section progressively
+  
+\end{frame}
+
+\begin{frame}{Mathematical Reveals}
+  
+  Consider the equation:
+  \begin{align*}
+    E &amp;= mc^2 \onslide&lt;2-&gt;{\\
+      &amp;= m \cdot (3 \times 10^8)^2} \onslide&lt;3-&gt;{\\
+      &amp;\approx 9 \times 10^{16} m \text{ joules}}
+  \end{align*}
+  
+\end{frame}</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🖼️ 2.7 Including Graphics and Media</span></h3>
+
+    <h4><strong>📷 Images</strong></h4>
+
+    <div style="background-color: #E8EAF6; padding: 15px; border-radius: 8px; border-left: 5px solid #3F51B5;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Including Images}
+  
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/diagram.png}
+    \caption{Image caption}
+  \end{figure}
+  
+\end{frame}</code></pre>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>⚙️ Common options</strong>:</p>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="50%" bgcolor="#C5CAE9" style="padding: 10px;">
+                    📏 <code>width=0.8\textwidth</code> - Scale to 80% of text width<br>
+                    📐 <code>height=5cm</code> - Fixed height
+                </td>
+                <td width="50%" bgcolor="#9FA8DA" style="padding: 10px;">
+                    🔄 <code>scale=0.5</code> - Scale to 50%<br>
+                    🔃 <code>angle=90</code> - Rotate 90 degrees
+                </td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 15px;"><strong>📦 Required package</strong>:</p>
+        <pre><code style="color: #333;">\usepackage{graphicx}  % Usually included in beamer by default</code></pre>
+    </div>
+
+    <hr>
+
+    <h4><strong>🎨 TikZ Graphics</strong> (Vector Diagrams)</h4>
+
+    <div style="background-color: #FCE4EC; padding: 15px; border-radius: 8px; border-left: 5px solid #E91E63;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{TikZ Diagram}
+  
+  \begin{tikzpicture}
+    \node[circle, draw, fill=blue!20] (A) at (0,0) {A};
+    \node[circle, draw, fill=red!20] (B) at (3,0) {B};
+    \draw[-&gt;] (A) -- (B);
+  \end{tikzpicture}
+  
+\end{frame}</code></pre>
+        </div>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="50%" bgcolor="#F8BBD0" style="padding: 15px;">
+                    <strong>✅ Advantages</strong>:
+                    <ul>
+                        <li>Perfect integration</li>
+                        <li>Scalable</li>
+                        <li>Editable</li>
+                    </ul>
+                </td>
+                <td width="50%" bgcolor="#F48FB1" style="padding: 15px;">
+                    <strong>📦 Required package</strong>:
+                    <pre><code style="color: #333;">\usepackage{tikz}</code></pre>
+                </td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Create diagrams directly in LaTeX</p>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🧭 2.8 Table of Contents and Navigation</span></h3>
+
+    <h4><strong>📑 Automatic Table of Contents</strong></h4>
+
+    <div style="background-color: #E3F2FD; padding: 15px; border-radius: 8px; border-left: 5px solid #2196F3;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}</code></pre>
+        </div>
+        <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Auto-generates from <code>\section</code> and <code>\subsection</code> commands</p>
+    </div>
+
+    <hr>
+
+    <h4><strong>📚 Using Sections</strong></h4>
+
+    <div style="background-color: #F3E5F5; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\section{Introduction}
+
+\begin{frame}{Introduction Slide}
+  Content here.
+\end{frame}
+
+\subsection{Background}
+
+\begin{frame}{Background Details}
+  More content.
+\end{frame}
+
+\section{Methods}
+% ... more frames</code></pre>
+        </div>
+
+        <p style="margin-top: 15px;"><strong>🎯 Purpose</strong>:</p>
+
+        <table style="width: 100%; margin-top: 15px;">
+            <tr>
+                <td width="50%" bgcolor="#E1BEE7" style="padding: 10px;">
+                    ✅ Creates logical structure<br>
+                    📋 Populates table of contents
+                </td>
+                <td width="50%" bgcolor="#CE93D8" style="padding: 10px;">
+                    🧭 Appears in navigation bars<br>
+                    📊 Organizes presentation hierarchy
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <h4><strong>🎯 Highlighted TOC Per Section</strong></h4>
+
+    <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+            <pre><code>\AtBeginSection[]{
+  \begin{frame}{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}</code></pre>
+        </div>
+        <p style="margin-top: 10px;">
+            <strong>🎯 Purpose</strong>: Automatically shows TOC at start of each section, highlighting current section<br>
+            <strong>✨ Effect</strong>: Helps audience track presentation progress
+        </p>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🎨 2.9 Common Customizations</span></h3>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>🚫 Removing Navigation Symbols</strong></h4>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\setbeamertemplate{navigation symbols}{}</code></pre>
+                </div>
+                <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Clean up footer (default navigation dots often unused)</p>
+            </td>
+            <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>📊 Custom Footer</strong></h4>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\setbeamertemplate{footline}{
+  \hfill\insertframenumber/\inserttotalframenumber\hspace{2mm}\vskip2mm
+}</code></pre>
+                </div>
+                <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Simple "slide X of Y" counter</p>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF3E0" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>🎨 Custom Colors</strong></h4>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\definecolor{myblue}{RGB}{0,102,204}
+\setbeamercolor{structure}{fg=myblue}
+\setbeamercolor{frametitle}{bg=myblue, fg=white}</code></pre>
+                </div>
+                <p style="margin-top: 10px;"><strong>🎯 Purpose</strong>: Match institutional or personal branding</p>
+            </td>
+            <td bgcolor="#F3E5F5" style="padding: 15px;">
+                <h4 style="margin-top:0;"><strong>🔤 Font Sizes</strong></h4>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\setbeamerfont{frametitle}{size=\Large, series=\bfseries}
+\setbeamerfont{title}{size=\huge}</code></pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">📋 2.10 Complete Example Template</span></h3>
+
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+        <strong>✨ Complete template attached in repo - copy and use!</strong>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">⚙️ 2.11 Compiling Your Beamer Presentation</span></h3>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F5E9" style="padding: 20px;">
+                <h4 style="margin-top:0;"><strong>🖥️ Using VS Code with LaTeX Workshop</strong></h4>
+                <ol>
+                    <li>💾 Save your <code>.tex</code> file</li>
+                    <li>🔄 LaTeX Workshop auto-compiles on save</li>
+                    <li>👁️ View PDF in side panel</li>
+                    <li>🔗 Use SyncTeX (Ctrl+Click) to navigate</li>
+                </ol>
+            </td>
+            <td width="50%" bgcolor="#E3F2FD" style="padding: 20px;">
+                <h4 style="margin-top:0;"><strong>💻 Command Line</strong></h4>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>pdflatex presentation.tex
+pdflatex presentation.tex  # Run twice for TOC</code></pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800; margin-top: 15px;">
+        <p><strong>📚 For bibliography</strong>:</p>
+        <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <pre><code>pdflatex presentation.tex
+bibtex presentation
+pdflatex presentation.tex
+pdflatex presentation.tex</code></pre>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">✅ 2.12 Beamer Best Practices</span></h3>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
+                <p><strong>1️⃣ Keep slides simple</strong><br>One main idea per slide</p>
+                <p><strong>2️⃣ Use overlays sparingly</strong><br>Too many clicks interrupt flow</p>
+                <p><strong>3️⃣ Consistent theme</strong><br>Choose one theme and stick with it</p>
+                <p><strong>4️⃣ Readable fonts</strong><br>11pt or 12pt for large rooms</p>
+            </td>
+            <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
+                <p><strong>5️⃣ High contrast</strong><br>Ensure text visible from back of room</p>
+                <p><strong>6️⃣ Test presentation mode</strong><br>PDF readers handle overlays differently</p>
+                <p><strong>7️⃣ Backup</strong><br>Bring PDF on USB drive (works everywhere)</p>
+                <p><strong>8️⃣ Practice</strong><br>Run through with actual PDF reader you'll use</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">🔧 2.13 Troubleshooting Common Issues</span></h3>
+
+    <table style="width: 100%;">
+        <tr>
+            <td bgcolor="#FFEBEE" style="padding: 15px;">
+                <p style="margin-top: 0;"><strong>❌ Issue</strong>: "Undefined control sequence" error</p>
+                <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <strong>✅ Solution</strong>: Check for typos in commands, ensure packages loaded
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#FFF3E0" style="padding: 15px;">
+                <p style="margin-top: 0;"><strong>❌ Issue</strong>: Overlays not working</p>
+                <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <strong>✅ Solution</strong>:
+                    <ul>
+                        <li>Verify using PDF reader that supports overlays (Adobe, Okular)</li>
+                        <li>Some viewers show all overlays at once</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#E3F2FD" style="padding: 15px;">
+                <p style="margin-top: 0;"><strong>❌ Issue</strong>: Images not appearing</p>
+                <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <strong>✅ Solution</strong>:
+                    <ul>
+                        <li>Check file path, use forward slashes</li>
+                        <li>Ensure image in correct directory</li>
+                        <li>Add <code>\graphicspath{{./figures/}}</code> to preamble</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#F3E5F5" style="padding: 15px;">
+                <p style="margin-top: 0;"><strong>❌ Issue</strong>: Frame content overflow</p>
+                <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <strong>✅ Solution</strong>:
+                    <ul>
+                        <li>Use <code>\small</code> or <code>\footnotesize</code> to reduce font size</li>
+                        <li>Split content across multiple frames</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#E8F5E9" style="padding: 15px;">
+                <p style="margin-top: 0;"><strong>❌ Issue</strong>: Bibliography not showing</p>
+                <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <strong>✅ Solution</strong>:
+                    <ul>
+                        <li>Use <code>\begin{frame}[allowframebreaks]{References}</code> for long bibliographies</li>
+                        <li>Run bibtex compilation sequence</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3><span style="color: #D62828;">📚 2.14 Additional Resources</span></h3>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F5E9" style="padding: 20px;">
+                <p style="margin-top: 0;"><strong>📖 Documentation &amp; Tutorials</strong></p>
+                <ul>
+                    <li>📘 <strong>Beamer Documentation</strong>: <code>texdoc beamer</code> (command line)</li>
+                    <li>🌐 <strong>CTAN</strong>: <a href="https://ctan.org/pkg/beamer" target="_blank">https://ctan.org/pkg/beamer</a></li>
+                    <li>🎓 <strong>Overleaf Tutorial</strong>: <a href="https://www.overleaf.com/learn/latex/Beamer" target="_blank">https://www.overleaf.com/learn/latex/Beamer</a></li>
+                </ul>
+            </td>
+            <td width="50%" bgcolor="#E3F2FD" style="padding: 20px;">
+                <p style="margin-top: 0;"><strong>🎨 Theme Galleries &amp; Help</strong></p>
+                <ul>
+                    <li>🖼️ <strong>Theme Gallery</strong>: <a href="https://deic.uab.cat/~iblanes/beamer_gallery/" target="_blank">https://deic.uab.cat/~iblanes/beamer_gallery/</a></li>
+                    <li>💬 <strong>Stack Exchange</strong>: <a href="https://tex.stackexchange.com/" target="_blank">https://tex.stackexchange.com/</a></li>
+                    <li>❓ Q&amp;A for LaTeX issues</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2><span style="color: #2E86AB;">📌 Quick Reference Card</span></h2>
+
+    <div style="background: linear-gradient(to right, #56CCF2, #2F80ED); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+        <h3 style="margin: 0; color: white;"><strong>Essential Shortcuts &amp; Commands</strong></h3>
+    </div>
+
+    <table>
+        <tr>
+            <td width="50%" bgcolor="#E8F4F8" style="padding: 20px;">
+                <h3 style="margin-top:0;"><strong>⌨️ VS Code Shortcuts</strong></h3>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><code>Ctrl+Alt+B</code> - 🔨 Build LaTeX</li>
+                        <li><code>Ctrl+Alt+V</code> - 👁️ View PDF</li>
+                        <li><code>Ctrl+Alt+J</code> - 🔗 Jump to PDF location</li>
+                    </ul>
+                </div>
+            </td>
+            <td width="50%" bgcolor="#FFF9E6" style="padding: 20px;">
+                <h3 style="margin-top:0;"><strong>📋 Essential Beamer Commands</strong></h3>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\begin{frame}{Title}         % Create frame
+\pause                       % Sequential reveal
+\item&lt;2-&gt;                    % Appears from slide 2
+\alert&lt;3&gt;{text}              % Highlight on slide 3
+\begin{columns}...\end{columns}  % Multi-column layout</code></pre>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#F0F8F0" style="padding: 20px;" colspan="2">
+                <h3 style="margin-top:0;"><strong>🎨 Theme Selection</strong></h3>
+                <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                    <pre><code>\usetheme{Madrid}            % Professional theme
+\usecolortheme{whale}        % Color scheme</code></pre>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <div class="text-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin: 30px 0;">
+        <h2>🎉 <strong>The End</strong> 🎉</h2>
+        <p><strong>Good luck with your Beamer presentations! 🚀</strong></p>
+        <h3><em>Welcome to SSTIA!</em></h3>
+    </div>
+
+</div>
+
+</body>
+</html>
