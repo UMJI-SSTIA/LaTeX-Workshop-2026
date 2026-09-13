@@ -1,8 +1,6 @@
-<div align="center">
+# <center>📚 LaTeX Tools & Beamer Presentation Tutorial</center>
 
-# 📚 LaTeX Tools & Beamer Presentation Tutorial
-
-## *SSTIA LaTeX Workshop 2026*
+## <center>*SSTIA LaTeX Workshop 2026*</center>
 
 
 ## <span style="color: #2E86AB;">📦 Part 1: LaTeX Tools & VS Code Plugin Recommendations</span>
