@@ -1,21 +1,20 @@
-# <center>📚 LaTeX Tools & Beamer Presentation Tutorial</center>
+# <center> LaTeX Tools & Beamer Presentation Tutorial</center>
 
 ## <center>*SSTIA LaTeX Workshop 2026*</center>
 
 
-## <span style="color: #2E86AB;">📦 Part 1: LaTeX Tools & VS Code Plugin Recommendations</span>
+## <span style="color: #2E86AB;"> Part 1: LaTeX Tools & VS Code Plugin Recommendations</span>
 
-### <span style="color: #A23B72;">🔧 1.1 Essential LaTeX Distributions</span>
+### <span style="color: #A23B72;"> 1.1 Essential LaTeX Distributions</span>
 
 <div style="background-color: #E8F4F8; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
 
-#### **🐧 TeX Live** 
-<span style="color: #06A77D;">✅ Recommended</span>
+#### **TeX Live** <span style="color: #06A77D;"> (Recommended)</span>
 
 **Purpose**: Complete LaTeX distribution with all packages included
 
 **Usage**: 
-- 🔗 Download: https://www.tug.org/texlive/
+- Download: https://www.tug.org/texlive/
 - Install via command line or GUI installer
 - Includes `pdflatex`, `xelatex`, `lualatex`
 
@@ -23,14 +22,13 @@
 - Comprehensive & cross-platform
 - Regularly updated
 
-**📦 Size**: ~7GB full installation
+**Size**: ~7GB full installation
 
 </div>
 
 <div style="background-color: #FFF4E6; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
 
-#### **🪟 MiKTeX**
-<span style="color: #F18F01;">Windows-focused</span>
+#### **🪟 MiKTeX**<span style="color: #F18F01;"> (Windows-focused)</span>
 
 **Purpose**: Lightweight LaTeX with on-demand package installation
 
@@ -49,8 +47,7 @@
 
 <div style="background-color: #F0F8F0; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
 
-#### **☁️ SJTU Overleaf**
-<span style="color: #5B9BD5;">Online Alternative</span>
+#### **☁️ SJTU Overleaf** <span style="color: #5B9BD5;">(Online Alternative)</span>
 
 **Purpose**: Cloud-based LaTeX editor (no local install)
 
@@ -69,30 +66,30 @@
 
 ---
 
-### <span style="color: #A23B72;">🔌 1.2 VS Code LaTeX Extensions</span>
+### <span style="color: #A23B72;">1.2 VS Code LaTeX Extensions</span>
 
 <div style="background: linear-gradient(135deg, #6c87ff 0%, #e4c8ff 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
 
-#### **⭐ LaTeX Workshop** <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">ESSENTIAL</span>
+#### **LaTeX Workshop** <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">ESSENTIAL</span>
 
 **Extension ID**: `James-Yu.latex-workshop`  
 **Purpose**: Complete LaTeX development environment in VS Code
 
 </div>
 
-**🎯 Key Features**:
+**Key Features**:
 
 <table>
 <tr>
 <td bgcolor="#E8F5E9" width="50%">
 
-**🔄 Auto-compilation**  
+**1. Auto-compilation**  
 Compiles on save automatically
 
 </td>
 <td bgcolor="#E3F2FD" width="50%">
 
-**📄 PDF Preview**  
+**2. PDF Preview**  
 Built-in preview with SyncTeX support
 
 </td>
@@ -100,13 +97,13 @@ Built-in preview with SyncTeX support
 <tr>
 <td bgcolor="#FFF3E0">
 
-**🎨 Syntax Highlighting**  
+**3. Syntax Highlighting**  
 Color-coded LaTeX commands
 
 </td>
 <td bgcolor="#F3E5F5">
 
-**💡 IntelliSense**  
+**4. IntelliSense**  
 Auto-completion for commands, citations
 
 </td>
@@ -114,14 +111,14 @@ Auto-completion for commands, citations
 <tr>
 <td bgcolor="#FCE4EC" colspan="2">
 
-**⚡ Snippet Support**  
+**5. Snippet Support**  
 Quick insertion of common structures
 
 </td>
 </tr>
 </table>
 
-**⚙️ Setup & Configuration**:
+**Setup & Configuration**:
 
 <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #4CAF50;">
 
@@ -137,7 +134,9 @@ Quick insertion of common structures
 
 </div>
 
-**📋 Common Commands** (Access via Ctrl+Shift+P):
+---
+
+**Common Commands** (Access via Ctrl+Shift+P):
 
 <table style="border-collapse: collapse; width: 100%;">
 <tr style="background-color: #4A90E2; color: white;">
@@ -145,31 +144,31 @@ Quick insertion of common structures
 <td style="padding: 10px;"><strong>Description</strong></td>
 </tr>
 <tr style="background-color: #E8F4F8;">
-<td style="padding: 8px;">🔨 <code>LaTeX Workshop: Build LaTeX project</code></td>
+<td style="padding: 8px;"><code>LaTeX Workshop: Build LaTeX project</code></td>
 <td style="padding: 8px;">Manual compilation</td>
 </tr>
 <tr style="background-color: #F5F5F5;">
-<td style="padding: 8px;">👁️ <code>LaTeX Workshop: View LaTeX PDF</code></td>
+<td style="padding: 8px;"><code>LaTeX Workshop: View LaTeX PDF</code></td>
 <td style="padding: 8px;">Open preview</td>
 </tr>
 <tr style="background-color: #E8F4F8;">
-<td style="padding: 8px;">🔗 <code>LaTeX Workshop: SyncTeX from cursor</code></td>
+<td style="padding: 8px;"><code>LaTeX Workshop: SyncTeX from cursor</code></td>
 <td style="padding: 8px;">Jump to PDF location</td>
 </tr>
 <tr style="background-color: #F5F5F5;">
-<td style="padding: 8px;">🧹 <code>LaTeX Workshop: Clean up auxiliary files</code></td>
+<td style="padding: 8px;"><code>LaTeX Workshop: Clean up auxiliary files</code></td>
 <td style="padding: 8px;">Remove .aux, .log files</td>
 </tr>
 </table>
 
-**⌨️ Useful Shortcuts**:
+**Useful Shortcuts**:
 
 <div style="background: linear-gradient(to right, #FFC371, #FF5F6D); padding: 15px; border-radius: 8px; color: white;">
 
-- `Ctrl+Alt+B` - 🔨 Build LaTeX project
-- `Ctrl+Alt+V` - 👁️ View PDF
-- `Ctrl+Alt+J` - 🔗 SyncTeX from cursor (source → PDF)
-- `Ctrl+Click` in PDF - ↩️ SyncTeX reverse (PDF → source)
+- `Ctrl+Alt+B` - Build LaTeX project
+- `Ctrl+Alt+V` - View PDF
+- `Ctrl+Alt+J` - SyncTeX from cursor (source → PDF)
+- `Ctrl+Click` in PDF - SyncTeX reverse (PDF → source)
 
 </div>
 
@@ -177,16 +176,16 @@ Quick insertion of common structures
 
 <div style="background-color: #F0F8FF; padding: 15px; border-radius: 10px; border-left: 5px solid #4169E1;">
 
-#### **🛠️ LaTeX Utilities** <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Enhanced Features</span>
+#### **LaTeX Utilities** <span style="background-color: #FFD700; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Enhanced Features</span>
 
 - **Extension ID**: `tecosaur.latex-utilities`
 - **Purpose**: Additional tools for LaTeX editing
 
 **Features**:
-- 📊 Live word count in status bar
-- 📋 Formatted paste (converts plain text to LaTeX)
-- 📚 Zotero citation integration
-- 🎨 TikZ preview support
+- Live word count in status bar
+- Formatted paste (converts plain text to LaTeX)
+- Zotero citation integration
+- TikZ preview support
 
 </div>
 
@@ -194,43 +193,44 @@ Quick insertion of common structures
 
 <div style="background-color: #FFE4E1; padding: 15px; border-radius: 10px; border-left: 5px solid #DC143C;">
 
-#### **📄 PDF Preview** <span style="background-color: #E0E0E0; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Alternative Viewer</span>
+#### **PDF Preview** <span style="background-color: #E0E0E0; color: #000; padding: 3px 8px; border-radius: 5px; font-size: 0.8em;">Alternative Viewer</span>
 
 - **Extension ID**: `tomoki1207.pdf`
 - **Purpose**: Simple PDF viewer for VS Code
 - **Usage**: Click PDF files in Explorer to view in VS Code tab
-- **Note**: LaTeX Workshop has built-in viewer, but this is useful for general PDF viewing
+- **Note**: LaTeX Workshop has built-in viewer, but this is useful for general PDF viewing \
 
+**⚠️ Warning**: May conflict with LaTeX Workshop
 </div>
 
 ---
 
-### <span style="color: #A23B72;">🛠️ 1.3 Additional Useful Tools</span>
+### <span style="color: #A23B72;">1.3 Additional Useful Tools</span>
 
 <table>
 <tr>
 <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
 
-#### **📚 Zotero + Better BibTeX**
+#### **Zotero + Better BibTeX**
 
 **Purpose**: Reference management and `.bib` file generation
 
 **Usage**: 
-- 📥 Install Zotero desktop app
-- 🔌 Install Better BibTeX plugin
-- 📤 Export collections as `.bib` files
-- ✍️ Use `\cite{}` commands with auto-completion in VS Code
+- Install Zotero desktop app
+- Install Better BibTeX plugin
+- Export collections as `.bib` files
+- Use `\cite{}` commands with auto-completion in VS Code
 
 </td>
 <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
 
-#### **✏️ Detexify**
+#### **Detexify**
 
 **Purpose**: Find LaTeX symbols by drawing
 
 **Usage**: 
-- 🌐 Visit http://detexify.kirelabs.org/classify.html
-- ✏️ Draw symbol → Get LaTeX command
+- Visit http://detexify.kirelabs.org/classify.html
+- Draw symbol → Get LaTeX command
 
 <span style="font-size: 2em;">∫ ∑ ∞ ≈ ≠ ≤</span>
 
@@ -239,24 +239,24 @@ Quick insertion of common structures
 <tr>
 <td bgcolor="#FFF3E0" style="padding: 15px;">
 
-#### **📊 TeXCount**
+#### **TeXCount**
 
 **Purpose**: Word count for LaTeX documents
 
 **Usage**: 
-- 💻 Command line tool, or use LaTeX Utilities extension
-- 🔢 Counts actual words, ignoring commands
+- Command line tool, or use LaTeX Utilities extension
+- Counts actual words, ignoring commands
 
 </td>
 <td bgcolor="#F3E5F5" style="padding: 15px;">
 
-#### **🎨 Inkscape with TexText**
+#### **Inkscape with TexText**
 
 **Purpose**: Create complex diagrams with LaTeX labels
 
 **Usage**: 
-- 🖼️ Draw in Inkscape
-- 🔤 Add LaTeX formulas via TexText plugin
+- Draw in Inkscape
+- Add LaTeX formulas via TexText plugin
 
 </td>
 </tr>
@@ -264,9 +264,9 @@ Quick insertion of common structures
 
 ---
 
-## <span style="color: #2E86AB;">🎬 Part 2: Beamer Presentation Tutorial</span>
+## <span style="color: #2E86AB;">Part 2: Beamer Presentation Tutorial</span>
 
-### <span style="color: #D62828;">📖 2.1 What is Beamer?</span>
+### <span style="color: #D62828;">2.1 What is Beamer?</span>
 
 <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white; margin: 20px 0;">
 
@@ -278,23 +278,23 @@ Quick insertion of common structures
 <tr>
 <td width="50%" bgcolor="#D4EDDA" style="padding: 20px;">
 
-### **✅ Advantages**
+### **Advantages**
 
-- 📐 Professional typesetting (especially for math)
-- 🎯 Consistent formatting
-- 🔄 Version control friendly (plain text)
-- 💰 No licensing costs
-- 🎛️ Precise control over layout
+- Professional typesetting (especially for math)
+- Consistent formatting
+- Version control friendly (plain text)
+- No licensing costs
+- Precise control over layout
 
 </td>
 <td width="50%" bgcolor="#CCE5FF" style="padding: 20px;">
 
-### **📌 When to use Beamer**
+### **When to use Beamer**
 
-- 🔬 Academic presentations with equations
-- 💻 Technical talks with code
-- 🎓 Consistent multi-presenter conferences
-- 📋 Reproducible presentation templates
+- Academic presentations with equations
+- Technical talks with code
+- Consistent multi-presenter conferences
+- Reproducible presentation templates
 
 </td>
 </tr>
@@ -302,9 +302,9 @@ Quick insertion of common structures
 
 ---
 
-### <span style="color: #D62828;">📝 2.2 Basic Beamer Structure</span>
+### <span style="color: #D62828;">2.2 Basic Beamer Structure</span>
 
-#### **💡 Minimal Example**
+#### **Minimal Example**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #FF6B6B;">
 
@@ -339,9 +339,9 @@ This is your first slide content.
 
 ---
 
-### <span style="color: #D62828;">🧩 2.3 Understanding Beamer Components</span>
+### <span style="color: #D62828;">2.3 Understanding Beamer Components</span>
 
-#### **⚙️ Document Class Options**
+#### **Document Class Options**
 
 <div style="background-color: #FFF9E6; padding: 15px; border-radius: 8px; border-left: 5px solid #FFB800;">
 
@@ -363,25 +363,25 @@ This is your first slide content.
 </tr>
 <tr style="background-color: #E8F4F8;">
 <td style="padding: 8px;"><code>aspectratio=169</code></td>
-<td style="padding: 8px;">🖥️ Modern widescreen format</td>
+<td style="padding: 8px;">Modern widescreen format</td>
 </tr>
 <tr style="background-color: #F5F5F5;">
 <td style="padding: 8px;"><code>10pt</code></td>
-<td style="padding: 8px;">📏 Readable font size (11pt or 12pt for larger rooms)</td>
+<td style="padding: 8px;">Readable font size (11pt or 12pt for larger rooms)</td>
 </tr>
 <tr style="background-color: #E8F4F8;">
 <td style="padding: 8px;"><code>handout</code></td>
-<td style="padding: 8px;">🖨️ Creates printer-friendly version</td>
+<td style="padding: 8px;">Creates printer-friendly version</td>
 </tr>
 <tr style="background-color: #F5F5F5;">
 <td style="padding: 8px;"><code>t</code></td>
-<td style="padding: 8px;">⬆️ Top alignment keeps content position consistent</td>
+<td style="padding: 8px;">Top alignment keeps content position consistent</td>
 </tr>
 </table>
 
 ---
 
-#### **🎨 Themes and Appearance**
+#### **Themes and Appearance**
 
 <div style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
 
@@ -393,7 +393,7 @@ This is your first slide content.
 <tr>
 <td width="33%" bgcolor="#FFE4E1" style="padding: 15px;">
 
-**1️⃣ Presentation Themes** (overall look)
+**Presentation Themes** (overall look)
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -407,16 +407,16 @@ This is your first slide content.
 
 </div>
 
-📍 Navigation bar at top  
-📂 Sidebar navigation  
-🔵 Blue header with navigation  
-✨ Minimal theme  
-⚪ Plain theme
+- Navigation bar at top  
+- Sidebar navigation  
+- Blue header with navigation  
+- Minimal theme  
+- Plain theme
 
 </td>
 <td width="33%" bgcolor="#E0F2F7" style="padding: 15px;">
 
-**2️⃣ Color Themes** (color scheme)
+**Color Themes** (color scheme)
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -429,10 +429,10 @@ This is your first slide content.
 
 </div>
 
-🎨 Default colors  
-🐬 Blue tones  
-🌹 Pink/red tones  
-🦫 Gray and red
+- Default colors  
+- Blue tones  
+- Pink/red tones  
+- Gray and red
 
 
 </td>
@@ -441,7 +441,7 @@ This is your first slide content.
 
 <div style="background-color: #D4EDDA; padding: 15px; border-radius: 8px; border-left: 5px solid #28A745; margin-top: 15px;">
 
-**💡 Popular Combination:**
+**Popular Combination:**
 
 ```latex
 \usetheme{Madrid}
@@ -458,7 +458,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-#### **📋 Title Frame Configuration**
+#### **Title Frame Configuration**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
 
@@ -482,15 +482,15 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 <td style="padding: 10px;"><strong>Purpose</strong></td>
 </tr>
 <tr style="background-color: #F3E5F5;">
-<td style="padding: 8px;">📌 Appear in footer/header</td>
+<td style="padding: 8px;">Appear in footer/header</td>
 <td style="padding: 8px;">Throughout presentation</td>
 </tr>
 <tr style="background-color: #E1BEE7;">
-<td style="padding: 8px;">✨ Keep navigation bar uncluttered</td>
+<td style="padding: 8px;">Keep navigation bar uncluttered</td>
 <td style="padding: 8px;">Better readability</td>
 </tr>
 <tr style="background-color: #F3E5F5;">
-<td style="padding: 8px;">📄 Long versions</td>
+<td style="padding: 8px;">Long versions</td>
 <td style="padding: 8px;">Appear only on title slide</td>
 </tr>
 </table>
@@ -508,9 +508,9 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-### <span style="color: #D62828;">🎯 2.4 Creating Content Frames</span>
+### <span style="color: #D62828;">2.4 Creating Content Frames</span>
 
-#### **📐 Basic Frame Structure**
+#### **Basic Frame Structure**
 
 <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
 
@@ -543,7 +543,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-#### **🔒 Fragile Frames** (for verbatim content)
+#### **Fragile Frames** (for verbatim content)
 
 <div style="background-color: #FFEBEE; padding: 15px; border-radius: 8px; border-left: 5px solid #F44336;">
 
@@ -562,10 +562,10 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 </div>
 
-**⚠️ Purpose**: `[fragile]` option required when frame contains:
-- ✅ `\verb` or `verbatim` environments
-- 💻 Code listings
-- 🔤 Special characters that need literal interpretation
+**Purpose**: `[fragile]` option required when frame contains:
+- `\verb` or `verbatim` environments
+- Code listings
+- pecial characters that need literal interpretation
 
 **❌ Without `[fragile]`**: LaTeX compilation errors occur
 
@@ -573,7 +573,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-#### **🎬 Plain Frames** (no header/footer)
+#### **Plain Frames** (no header/footer)
 
 <div style="background-color: #E8EAF6; padding: 15px; border-radius: 8px; border-left: 5px solid #3F51B5;">
 
@@ -588,16 +588,16 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 </div>
 
-**🎯 Purpose**: Full-screen content without theme decorations  
-**📌 Use cases**: Title slides, image-only slides, thank you slides
+**Purpose**: Full-screen content without theme decorations  
+**Use cases**: Title slides, image-only slides, thank you slides
 
 </div>
 
 ---
 
-### <span style="color: #D62828;">📊 2.5 Structuring Content</span>
+### <span style="color: #D62828;">2.5 Structuring Content</span>
 
-#### **📝 Lists**
+#### **Lists**
 
 <div style="background-color: #F1F8E9; padding: 15px; border-radius: 8px; border-left: 5px solid #8BC34A;">
 
@@ -626,7 +626,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 </div>
 
-**🎨 Customizing bullets**:
+**Customizing bullets**:
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -641,7 +641,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-#### **📐 Columns Layout**
+#### **Columns Layout**
 
 <div style="background-color: #E1F5FE; padding: 15px; border-radius: 8px; border-left: 5px solid #03A9F4;">
 
@@ -674,7 +674,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 <tr>
 <td width="50%" bgcolor="#B3E5FC" style="padding: 15px;">
 
-**🎯 Purpose**: 
+**Purpose**: 
 - Side-by-side content presentation
 - Compare/contrast layouts
 - Image alongside text
@@ -682,7 +682,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 </td>
 <td width="50%" bgcolor="#81D4FA" style="padding: 15px;">
 
-**⚙️ Options**:
+**Options**:
 - `0.5\textwidth` = 50% width per column
 - `[T]` = Top align columns
 - `[c]` = Center align (default)
@@ -695,7 +695,7 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 
 ---
 
-#### **📦 Blocks** (Highlighted Sections)
+#### **Blocks** (Highlighted Sections)
 
 <div style="background-color: #FFF8E1; padding: 15px; border-radius: 8px; border-left: 5px solid #FFC107;">
 
@@ -725,26 +725,26 @@ Combination matrix (default mode): https://hartwork.org/beamer-theme-matrix/
 <tr>
 <td width="33%" bgcolor="#E3F2FD" style="padding: 10px; text-align: center;">
 
-**📘 block**  
+**block**  
 Standard block
 
 </td>
 <td width="33%" bgcolor="#FFEBEE" style="padding: 10px; text-align: center;">
 
-**⚠️ alertblock**  
+**alertblock**  
 Warning (red)
 
 </td>
 <td width="33%" bgcolor="#E8F5E9" style="padding: 10px; text-align: center;">
 
-**✅ exampleblock**  
+**exampleblock**  
 Example (green)
 
 </td>
 </tr>
 </table>
 
-**🎨 Customization**:
+**Customization**:
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -759,7 +759,7 @@ Example (green)
 
 ---
 
-### <span style="color: #D62828;">✨ 2.6 Overlays and Animations</span>
+### <span style="color: #D62828;">2.6 Overlays and Animations</span>
 
 <div style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
 
@@ -767,7 +767,7 @@ Example (green)
 
 </div>
 
-#### **🎬 Basic Overlay Syntax**
+#### **Basic Overlay Syntax**
 
 <div style="background-color: #F3E5F5; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
 
@@ -789,7 +789,7 @@ Example (green)
 
 </div>
 
-**📋 Overlay Specifications**:
+**Overlay Specifications**:
 
 <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
 <tr style="background-color: #7B1FA2; color: white;">
@@ -798,29 +798,29 @@ Example (green)
 </tr>
 <tr style="background-color: #F3E5F5;">
 <td style="padding: 8px;"><code>&lt;n&gt;</code></td>
-<td style="padding: 8px;">⚫ Appears only on slide n</td>
+<td style="padding: 8px;">Appears only on slide n</td>
 </tr>
 <tr style="background-color: #E1BEE7;">
 <td style="padding: 8px;"><code>&lt;n-&gt;</code></td>
-<td style="padding: 8px;">➡️ Appears from slide n onwards</td>
+<td style="padding: 8px;">Appears from slide n onwards</td>
 </tr>
 <tr style="background-color: #F3E5F5;">
 <td style="padding: 8px;"><code>&lt;n-m&gt;</code></td>
-<td style="padding: 8px;">↔️ Appears on slides n through m</td>
+<td style="padding: 8px;">Appears on slides n through m</td>
 </tr>
 <tr style="background-color: #E1BEE7;">
 <td style="padding: 8px;"><code>&lt;-n&gt;</code></td>
-<td style="padding: 8px;">⬅️ Appears up to slide n</td>
+<td style="padding: 8px;">Appears up to slide n</td>
 </tr>
 </table>
 
-**🎯 Purpose**: Control when each element appears during presentation
+**Purpose**: Control when each element appears during presentation
 
 </div>
 
 ---
 
-#### **⏸️ Pause Command** (Simple Sequential Reveals)
+#### **Pause Command** (Simple Sequential Reveals)
 
 <div style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 5px solid #4CAF50;">
 
@@ -852,12 +852,12 @@ Example (green)
 <tr>
 <td width="50%" bgcolor="#C8E6C9" style="padding: 15px;">
 
-**✅ Purpose**: Simplest way to create step-by-step reveals
+**Purpose**: Simplest way to create step-by-step reveals
 
 </td>
 <td width="50%" bgcolor="#FFCCBC" style="padding: 15px;">
 
-**⚠️ Limitation**: Less control than explicit overlay numbers
+**Limitation**: Less control than explicit overlay numbers
 
 </td>
 </tr>
@@ -867,7 +867,7 @@ Example (green)
 
 ---
 
-#### **🎨 Alert and Emphasis**
+#### **Alert and Emphasis**
 
 <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
 
@@ -895,7 +895,7 @@ Example (green)
 
 </div>
 
-**📊 Differences**:
+**Differences**:
 
 <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
 <tr style="background-color: #FF9800; color: white;">
@@ -904,15 +904,15 @@ Example (green)
 </tr>
 <tr style="background-color: #FFE0B2;">
 <td style="padding: 8px;"><code>\alert&lt;n&gt;{text}</code></td>
-<td style="padding: 8px;">🔴 Highlights in alert color on slide n</td>
+<td style="padding: 8px;">Highlights in alert color on slide n</td>
 </tr>
 <tr style="background-color: #FFCC80;">
 <td style="padding: 8px;"><code>\onslide&lt;n-&gt;{content}</code></td>
-<td style="padding: 8px;">👁️ Shows content, reserves space when hidden</td>
+<td style="padding: 8px;">Shows content, reserves space when hidden</td>
 </tr>
 <tr style="background-color: #FFE0B2;">
 <td style="padding: 8px;"><code>\only&lt;n&gt;{content}</code></td>
-<td style="padding: 8px;">⚡ Shows content, no space reservation when hidden</td>
+<td style="padding: 8px;">Shows content, no space reservation when hidden</td>
 </tr>
 </table>
 
@@ -920,7 +920,7 @@ Example (green)
 
 ---
 
-#### **🔬 Advanced: Overlay-Aware Commands**
+#### **Advanced: Overlay-Aware Commands**
 
 <div style="background-color: #E0F2F1; padding: 15px; border-radius: 8px; border-left: 5px solid #009688;">
 
@@ -951,9 +951,9 @@ Example (green)
 
 ---
 
-### <span style="color: #D62828;">🖼️ 2.7 Including Graphics and Media</span>
+### <span style="color: #D62828;">2.7 Including Graphics and Media</span>
 
-#### **📷 Images**
+#### **Images**
 
 <div style="background-color: #E8EAF6; padding: 15px; border-radius: 8px; border-left: 5px solid #3F51B5;">
 
@@ -973,26 +973,26 @@ Example (green)
 
 </div>
 
-**⚙️ Common options**:
+**Common options**:
 
 <table style="width: 100%; margin-top: 15px;">
 <tr>
 <td width="50%" bgcolor="#C5CAE9" style="padding: 10px;">
 
-📏 `width=0.8\textwidth` - Scale to 80% of text width  
-📐 `height=5cm` - Fixed height
+`width=0.8\textwidth` - Scale to 80% of text width  
+`height=5cm` - Fixed height
 
 </td>
 <td width="50%" bgcolor="#9FA8DA" style="padding: 10px;">
 
-🔄 `scale=0.5` - Scale to 50%  
-🔃 `angle=90` - Rotate 90 degrees
+`scale=0.5` - Scale to 50%  
+`angle=90` - Rotate 90 degrees
 
 </td>
 </tr>
 </table>
 
-**📦 Required package**:
+**Required package**:
 ```latex
 \usepackage{graphicx}  % Usually included in beamer by default
 ```
@@ -1001,7 +1001,7 @@ Example (green)
 
 ---
 
-#### **🎨 TikZ Graphics** (Vector Diagrams)
+#### **TikZ Graphics** (Vector Diagrams)
 
 <div style="background-color: #FCE4EC; padding: 15px; border-radius: 8px; border-left: 5px solid #E91E63;">
 
@@ -1025,7 +1025,7 @@ Example (green)
 <tr>
 <td width="50%" bgcolor="#F8BBD0" style="padding: 15px;">
 
-**✅ Advantages**: 
+**Advantages**: 
 - Perfect integration
 - Scalable
 - Editable
@@ -1033,7 +1033,7 @@ Example (green)
 </td>
 <td width="50%" bgcolor="#F48FB1" style="padding: 15px;">
 
-**📦 Required package**:
+**Required package**:
 ```latex
 \usepackage{tikz}
 ```
@@ -1042,15 +1042,15 @@ Example (green)
 </tr>
 </table>
 
-**🎯 Purpose**: Create diagrams directly in LaTeX
+**Purpose**: Create diagrams directly in LaTeX
 
 </div>
 
 ---
 
-### <span style="color: #D62828;">🧭 2.8 Table of Contents and Navigation</span>
+### <span style="color: #D62828;">2.8 Table of Contents and Navigation</span>
 
-#### **📑 Automatic Table of Contents**
+#### **Automatic Table of Contents**
 
 <div style="background-color: #E3F2FD; padding: 15px; border-radius: 8px; border-left: 5px solid #2196F3;">
 
@@ -1064,13 +1064,13 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: Auto-generates from `\section` and `\subsection` commands
+**Purpose**: Auto-generates from `\section` and `\subsection` commands
 
 </div>
 
 ---
 
-#### **📚 Using Sections**
+#### **Using Sections**
 
 <div style="background-color: #F3E5F5; padding: 15px; border-radius: 8px; border-left: 5px solid #9C27B0;">
 
@@ -1095,20 +1095,20 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: 
+**Purpose**: 
 
 <table style="width: 100%; margin-top: 15px;">
 <tr>
 <td width="50%" bgcolor="#E1BEE7" style="padding: 10px;">
 
-✅ Creates logical structure  
-📋 Populates table of contents
+Creates logical structure  
+Populates table of contents
 
 </td>
 <td width="50%" bgcolor="#CE93D8" style="padding: 10px;">
 
-🧭 Appears in navigation bars  
-📊 Organizes presentation hierarchy
+Appears in navigation bars  
+Organizes presentation hierarchy
 
 </td>
 </tr>
@@ -1118,7 +1118,7 @@ Example (green)
 
 ---
 
-#### **🎯 Highlighted TOC Per Section**
+#### **Highlighted TOC Per Section**
 
 <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
 
@@ -1134,20 +1134,20 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: Automatically shows TOC at start of each section, highlighting current section  
-**✨ Effect**: Helps audience track presentation progress
+**Purpose**: Automatically shows TOC at start of each section, highlighting current section  
+**Effect**: Helps audience track presentation progress
 
 </div>
 
 ---
 
-### <span style="color: #D62828;">🎨 2.9 Common Customizations</span>
+### <span style="color: #D62828;">2.9 Common Customizations</span>
 
 <table>
 <tr>
 <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
 
-#### **🚫 Removing Navigation Symbols**
+#### **Removing Navigation Symbols**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1157,12 +1157,12 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: Clean up footer (default navigation dots often unused)
+**Purpose**: Clean up footer (default navigation dots often unused)
 
 </td>
 <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
 
-#### **📊 Custom Footer**
+#### **Custom Footer**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1174,14 +1174,14 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: Simple "slide X of Y" counter
+**Purpose**: Simple "slide X of Y" counter
 
 </td>
 </tr>
 <tr>
 <td bgcolor="#FFF3E0" style="padding: 15px;">
 
-#### **🎨 Custom Colors**
+#### **Custom Colors**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1193,12 +1193,12 @@ Example (green)
 
 </div>
 
-**🎯 Purpose**: Match institutional or personal branding
+**Purpose**: Match institutional or personal branding
 
 </td>
 <td bgcolor="#F3E5F5" style="padding: 15px;">
 
-#### **🔤 Font Sizes**
+#### **Font Sizes**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1215,33 +1215,33 @@ Example (green)
 
 ---
 
-### <span style="color: #D62828;">📋 2.10 Complete Example Template</span>
+### <span style="color: #D62828;">2.10 Complete Example Template</span>
 
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
 
-**✨ Complete template attached in repo - copy and use!**
+**Complete template attached in repo - copy and use!**
 
 </div>
 
 ---
 
-### <span style="color: #D62828;">⚙️ 2.11 Compiling Your Beamer Presentation</span>
+### <span style="color: #D62828;">2.11 Compiling Your Beamer Presentation</span>
 
 <table>
 <tr>
 <td width="50%" bgcolor="#E8F5E9" style="padding: 20px;">
 
-#### **🖥️ Using VS Code with LaTeX Workshop**
+#### **Using VS Code with LaTeX Workshop**
 
-1. 💾 Save your `.tex` file
-2. 🔄 LaTeX Workshop auto-compiles on save
-3. 👁️ View PDF in side panel
-4. 🔗 Use SyncTeX (Ctrl+Click) to navigate
+1. Save your `.tex` file
+2. LaTeX Workshop auto-compiles on save
+3. View PDF in side panel
+4. Use SyncTeX (Ctrl+Click) to navigate
 
 </td>
 <td width="50%" bgcolor="#E3F2FD" style="padding: 20px;">
 
-#### **💻 Command Line**
+#### **Command Line**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1258,7 +1258,7 @@ pdflatex presentation.tex  # Run twice for TOC
 
 <div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800; margin-top: 15px;">
 
-**📚 For bibliography**:
+**For bibliography**:
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1275,37 +1275,37 @@ pdflatex presentation.tex
 
 ---
 
-### <span style="color: #D62828;">✅ 2.12 Beamer Best Practices</span>
+### <span style="color: #D62828;">2.12 Beamer Best Practices</span>
 
 <table>
 <tr>
 <td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
 
-**1️⃣ Keep slides simple**  
+**1. Keep slides simple**  
 One main idea per slide
 
-**2️⃣ Use overlays sparingly**  
+**2. Use overlays sparingly**  
 Too many clicks interrupt flow
 
-**3️⃣ Consistent theme**  
+**3. Consistent theme**  
 Choose one theme and stick with it
 
-**4️⃣ Readable fonts**  
+**4. Readable fonts**  
 11pt or 12pt for large rooms
 
 </td>
 <td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
 
-**5️⃣ High contrast**  
+**5. High contrast**  
 Ensure text visible from back of room
 
-**6️⃣ Test presentation mode**  
+**6. Test presentation mode**  
 PDF readers handle overlays differently
 
-**7️⃣ Backup**  
+**7. Backup**  
 Bring PDF on USB drive (works everywhere)
 
-**8️⃣ Practice**  
+**8. Practice**  
 Run through with actual PDF reader you'll use
 
 </td>
@@ -1320,11 +1320,11 @@ Run through with actual PDF reader you'll use
 <tr>
 <td bgcolor="#FFEBEE" style="padding: 15px;">
 
-**❌ Issue**: "Undefined control sequence" error
+**Issue**: "Undefined control sequence" error
 
 <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-**✅ Solution**: Check for typos in commands, ensure packages loaded
+**Solution**: Check for typos in commands, ensure packages loaded
 
 </div>
 
@@ -1333,11 +1333,11 @@ Run through with actual PDF reader you'll use
 <tr>
 <td bgcolor="#FFF3E0" style="padding: 15px;">
 
-**❌ Issue**: Overlays not working
+**Issue**: Overlays not working
 
 <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-**✅ Solution**: 
+**Solution**: 
 - Verify using PDF reader that supports overlays (Adobe, Okular)
 - Some viewers show all overlays at once
 
@@ -1348,11 +1348,11 @@ Run through with actual PDF reader you'll use
 <tr>
 <td bgcolor="#E3F2FD" style="padding: 15px;">
 
-**❌ Issue**: Images not appearing
+**Issue**: Images not appearing
 
 <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-**✅ Solution**: 
+**Solution**: 
 - Check file path, use forward slashes
 - Ensure image in correct directory
 - Add `\graphicspath{{./figures/}}` to preamble
@@ -1364,11 +1364,11 @@ Run through with actual PDF reader you'll use
 <tr>
 <td bgcolor="#F3E5F5" style="padding: 15px;">
 
-**❌ Issue**: Frame content overflow
+**Issue**: Frame content overflow
 
 <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-**✅ Solution**: 
+**Solution**: 
 - Use `\small` or `\footnotesize` to reduce font size
 - Split content across multiple frames
 
@@ -1379,11 +1379,11 @@ Run through with actual PDF reader you'll use
 <tr>
 <td bgcolor="#E8F5E9" style="padding: 15px;">
 
-**❌ Issue**: Bibliography not showing
+**Issue**: Bibliography not showing
 
 <div style="background-color: #C8E6C9; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-**✅ Solution**: 
+**Solution**: 
 - Use `\begin{frame}[allowframebreaks]{References}` for long bibliographies
 - Run bibtex compilation sequence
 
@@ -1395,26 +1395,26 @@ Run through with actual PDF reader you'll use
 
 ---
 
-### <span style="color: #D62828;">📚 2.14 Additional Resources</span>
+### <span style="color: #D62828;">2.14 Additional Resources</span>
 
 <table>
 <tr>
 <td width="50%" bgcolor="#E8F5E9" style="padding: 20px;">
 
-**📖 Documentation & Tutorials**
+**Documentation & Tutorials**
 
-- 📘 **Beamer Documentation**: `texdoc beamer` (command line)
-- 🌐 **CTAN**: https://ctan.org/pkg/beamer
-- 🎓 **Overleaf Tutorial**: https://www.overleaf.com/learn/latex/Beamer
+- **Beamer Documentation**: `texdoc beamer` (command line)
+- **CTAN**: https://ctan.org/pkg/beamer
+- **Overleaf Tutorial**: https://www.overleaf.com/learn/latex/Beamer
 
 </td>
 <td width="50%" bgcolor="#E3F2FD" style="padding: 20px;">
 
-**🎨 Theme Galleries & Help**
+**Theme Galleries & Help**
 
-- 🖼️ **Theme Gallery**: https://deic.uab.cat/~iblanes/beamer_gallery/
-- 💬 **Stack Exchange**: https://tex.stackexchange.com/
-- ❓ Q&A for LaTeX issues
+- **Theme Gallery**: https://deic.uab.cat/~iblanes/beamer_gallery/
+- **Stack Exchange**: https://tex.stackexchange.com/
+- **Beamer Style**: https://blog.csdn.net/HGGshiwo/article/details/113774758
 
 </td>
 </tr>
@@ -1505,7 +1505,7 @@ Change theme colors to match your institution's branding
 
 ---
 -->
-## <span style="color: #2E86AB;">📌 Quick Reference Card</span>
+## <span style="color: #2E86AB;">Quick Reference Card</span>
 
 <div style="background: linear-gradient(to right, #56CCF2, #2F80ED); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
 
@@ -1517,20 +1517,20 @@ Change theme colors to match your institution's branding
 <tr>
 <td width="50%" bgcolor="#E8F4F8" style="padding: 20px;">
 
-### **⌨️ VS Code Shortcuts**
+### **VS Code Shortcuts**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
-- `Ctrl+Alt+B` - 🔨 Build LaTeX
-- `Ctrl+Alt+V` - 👁️ View PDF
-- `Ctrl+Alt+J` - 🔗 Jump to PDF location
+- `Ctrl+Alt+B` - Build LaTeX
+- `Ctrl+Alt+V` - View PDF
+- `Ctrl+Alt+J` - Jump to PDF location
 
 </div>
 
 </td>
 <td width="50%" bgcolor="#FFF9E6" style="padding: 20px;">
 
-### **📋 Essential Beamer Commands**
+### **Essential Beamer Commands**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1549,7 +1549,7 @@ Change theme colors to match your institution's branding
 <tr>
 <td bgcolor="#F0F8F0" style="padding: 20px;" colspan="2">
 
-### **🎨 Theme Selection**
+### **Theme Selection**
 
 <div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px; margin-top: 10px;">
 
@@ -1566,11 +1566,421 @@ Change theme colors to match your institution's branding
 
 ---
 
+## <span style="color: #2E86AB;">Part 3: Introduction to Markdown & Typst</span>
+
+### <span style="color: #D62828;">3.1 Comparison: Markdown vs Typst vs LaTeX</span>
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; color: white; margin: 20px 0;">
+
+**Choose the right tool for the right job. Each has its ideal use case.**
+
+</div>
+
+<table>
+<tr style="background-color: #4A90E2; color: white;">
+<td style="padding: 10px; text-align: center;"><strong>Tool</strong></td>
+<td style="padding: 10px;"><strong>Best For</strong></td>
+<td style="padding: 10px;"><strong>Key Features</strong></td>
+</tr>
+<tr style="background-color: #E8F4F8;">
+<td style="padding: 8px; text-align: center;"><strong>Markdown</strong></td>
+<td style="padding: 8px;">
+Quick notes & docs<br>
+README/blogs/wikis<br>
+Simple reports<br>
+Online collaboration
+</td>
+<td style="padding: 8px;">
+Minimal syntax, fast to learn<br>
+Universal support<br>
+GitHub/forum native<br>
+Limited layout control
+</td>
+</tr>
+<tr style="background-color: #F5F5F5;">
+<td style="padding: 8px; text-align: center;"><strong>Typst</strong></td>
+<td style="padding: 8px;">
+Modern academic docs<br>
+Course reports<br>
+Custom typesetting<br>
+Medium-complexity papers
+</td>
+<td style="padding: 8px;">
+Simpler than LaTeX<br>
+Fast compilation<br>
+Clear error messages<br>
+Newer ecosystem
+</td>
+</tr>
+<tr style="background-color: #E8F4F8;">
+<td style="padding: 8px; text-align: center;"><strong>LaTeX</strong></td>
+<td style="padding: 8px;">
+Academic papers (math/physics)<br>
+Formal publications<br>
+Complex formulas<br>
+Journal submissions
+</td>
+<td style="padding: 8px;">
+Professional typesetting<br>
+Mature ecosystem<br>
+Academic standard<br>
+Steep learning curve
+</td>
+</tr>
+</table>
+
+<div style="background-color: #FFF9E6; padding: 15px; border-radius: 8px; border-left: 5px solid #FFB800; margin-top: 15px;">
+
+**Selection Guide**:
+- **Daily notes/docs**: Markdown (fastest)
+- **Modern academic docs/course reports**: Typst (balance of simplicity and professionalism)
+- **Journal submissions/complex math**: LaTeX (most professional, often required)
+- **Presentations**: LaTeX Beamer (academic) or Typst Polylux (modern)
+
+</div>
+
+---
+
+### <span style="color: #D62828;">3.2 Markdown Basics</span>
+
+<div style="background: linear-gradient(to right, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+
+**Markdown: The simplest markup language. Learn it in 30 minutes.**
+
+</div>
+
+#### **Essential Syntax**
+
+<div style="background-color: #E8F5E9; padding: 15px; border-radius: 8px; border-left: 5px solid #4CAF50;">
+
+<div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+
+```markdown
+# Heading 1
+## Heading 2
+
+**Bold text**
+*Italic text*
+
+- Unordered list
+  - Nested item
+
+1. Ordered list
+2. Second item
+
+[Link text](https://example.com)
+![Image](image.png)
+
+`inline code`
+
+> Blockquote
+```
+
+</div>
+
+</div>
+
+#### **Math Support** (platform-dependent)
+
+<div style="background-color: #E3F2FD; padding: 15px; border-radius: 8px; border-left: 5px solid #2196F3;">
+
+<div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+
+```markdown
+Inline: $E = mc^2$
+
+Block:
+$$
+\int_{a}^{b} f(x) \, dx
+$$
+```
+
+</div>
+
+<p style="margin-top: 10px;"><strong>Note</strong>: GitHub Markdown and VS Code support math with extensions</p>
+
+</div>
+
+#### **Common Editors**
+
+<table>
+<tr>
+<td width="50%" bgcolor="#E8F5E9" style="padding: 15px;">
+
+**VS Code**
+- Extension: Markdown All in One
+- Preview: `Ctrl+Shift+V`
+- LaTeX formula support
+
+</td>
+<td width="50%" bgcolor="#E3F2FD" style="padding: 15px;">
+
+**Online Tools**
+- Typora (WYSIWYG)
+- Obsidian (note management)
+- HackMD (collaboration)
+
+</td>
+</tr>
+</table>
+
+---
+
+### <span style="color: #D62828;">3.3 Typst Basics</span>
+
+<div style="background: linear-gradient(to right, #56CCF2, #2F80ED); padding: 20px; border-radius: 10px; color: white; margin: 20px 0;">
+
+**Typst: A modern LaTeX alternative. Faster and simpler.**
+
+</div>
+
+#### **Why Typst?**
+
+<table>
+<tr>
+<td width="50%" bgcolor="#D4EDDA" style="padding: 20px;">
+
+### **Advantages**
+
+- Fast compilation (incremental)
+- Intuitive syntax
+- Clear error messages
+- Smooth live preview
+- Modern design built-in
+
+</td>
+<td width="50%" bgcolor="#CCE5FF" style="padding: 20px;">
+
+### **Limitations**
+
+- New ecosystem (released 2023)
+- Fewer packages than LaTeX
+- Less documentation
+- Growing academic adoption
+
+</td>
+</tr>
+</table>
+
+#### **Basic Syntax**
+
+<div style="background-color: #FFF3E0; padding: 15px; border-radius: 8px; border-left: 5px solid #FF9800;">
+
+<div style="background-color: #263238; color: #AEDD94; padding: 10px; border-radius: 5px;">
+
+```typst
+#set document(title: "My Report")
+#set page(numbering: "1")
+
+= Heading 1
+== Heading 2
+
+*Bold* _Italic_ `code`
+
+- Unordered list
++ Ordered list
+
+// Math (native support)
+Inline: $E = m c^2$
+
+Block:
+$ integral_a^b f(x) dif x $
+
+#figure(
+  image("fig.png", width: 80%),
+  caption: [Figure caption]
+)
+```
+
+</div>
+
+</div>
+
+#### **Installation & Usage**
+
+<table>
+<tr>
+<td width="50%" bgcolor="#E8F5E9" style="padding: 20px;">
+
+#### **Local Install**
+
+**Download**
+- Official: https://typst.app/
+- CLI: `cargo install typst-cli`
+
+**Compile**
+```bash
+typst compile doc.typ
+typst watch doc.typ
+```
+
+**VS Code Extension**
+- Extension: Typst LSP
+
+</td>
+<td width="50%" bgcolor="#E3F2FD" style="padding: 20px;">
+
+#### **Online Use**
+
+**Typst Web App**
+- https://typst.app/
+- No installation needed
+- Real-time collaboration
+- Template library
+- Auto-save
+
+**Recommended**: Try the web version first
+
+</td>
+</tr>
+</table>
+
+---
+
+### <span style="color: #D62828;">3.4 Quick Comparison: Same Task, Three Tools</span>
+
+**Task: Create an academic document with formulas**
+
+<table>
+<tr style="background-color: #4A90E2; color: white;">
+<td style="padding: 10px; width: 33%; text-align: center;"><strong>Markdown</strong></td>
+<td style="padding: 10px; width: 33%; text-align: center;"><strong>Typst</strong></td>
+<td style="padding: 10px; width: 33%; text-align: center;"><strong>LaTeX</strong></td>
+</tr>
+<tr>
+<td bgcolor="#E8F5E9" style="padding: 10px; vertical-align: top;">
+
+```markdown
+# Title
+
+Formula: $E = mc^2$
+
+- Item 1
+- Item 2
+```
+
+Simplest syntax  
+Limited control
+
+</td>
+<td bgcolor="#FFF3E0" style="padding: 10px; vertical-align: top;">
+
+```typst
+= Title
+
+Formula: $E = m c^2$
+
+- Item 1
+- Item 2
+```
+
+Clean + professional  
+Fast compilation
+
+</td>
+<td bgcolor="#E3F2FD" style="padding: 10px; vertical-align: top;">
+
+```latex
+\section{Title}
+
+$E = mc^2$
+
+\begin{itemize}
+  \item Item 1
+\end{itemize}
+```
+
+Most professional  
+Complex syntax
+
+</td>
+</tr>
+</table>
+
+---
+
+### <span style="color: #D62828;">3.5 Learning Resources</span>
+
+<table>
+<tr>
+<td width="33%" bgcolor="#E8F5E9" style="padding: 20px;">
+
+#### **Markdown**
+
+**Official**
+- https://www.markdownguide.org/
+
+**Tutorials**
+- GitHub Markdown Guide
+- CommonMark Spec
+
+</td>
+<td width="33%" bgcolor="#FFF3E0" style="padding: 20px;">
+
+#### **Typst**
+
+**Official**
+- Website: https://typst.app/
+- Docs: https://typst.app/docs/
+- Templates: https://typst.app/universe/
+
+</td>
+<td width="33%" bgcolor="#E3F2FD" style="padding: 20px;">
+
+#### **LaTeX**
+
+**See Part 1 & 2**
+- TeX Live installation
+- LaTeX Workshop
+- Overleaf tutorials
+- Beamer presentations
+
+</td>
+</tr>
+</table>
+
+---
+
+### <span style="color: #D62828;">3.6 Practical Recommendations</span>
+
+<div style="background-color: #D4EDDA; padding: 20px; border-radius: 8px; border-left: 5px solid #28A745;">
+
+**Progressive Learning Path**
+
+1. **Start with Markdown** (1-2 hours)
+   - For daily notes and README files
+   - Master basic markup syntax
+
+2. **Explore Typst** (modern academic reports)
+   - Try the web app: typst.app
+   - Generate formatted documents quickly
+
+3. **Learn LaTeX when needed**
+   - Required for journal submissions
+   - Complex typesetting needs
+   - Reference Part 1 & 2
+
+</div>
+
+<div style="background-color: #FFF3E0; padding: 20px; border-radius: 8px; border-left: 5px solid #FF9800; margin-top: 15px;">
+
+**Tool Combination Suggestions**
+
+- **Daily notes**: Markdown (Obsidian/Typora)
+- **Course assignments**: Typst (fast + professional)
+- **Academic papers**: LaTeX (journal standard)
+- **Tech blogs**: Markdown (GitHub Pages)
+- **Presentations**: LaTeX Beamer or Typst Polylux
+
+</div>
+
+---
+
 <div align="center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; color: white; margin: 30px 0;">
 
-## 🎉 **The End** 🎉
+## **The End**
 
-**Good luck with your Beamer presentations! 🚀**
+**Good luck with your Markdown, Typst, and LaTeX journey!**
 
 ### *Welcome to SSTIA!*
 
