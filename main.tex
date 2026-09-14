@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}   % images
+\usepackage{xcolor}     % colors (used later)
+\usepackage{hyperref, float}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{setspace}
+\doublespacing   % or \onehalfspacing
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} \fancyfoot{} % clear original headers/footers style
+\fancyhead[L]{My First LaTeX Document}
+\fancyhead[R]{\thepage}
+
+\title{My First LaTeX Document}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+Hello, LaTeX world!
+
+\section{Paragraphs, Line Breaks, and Text Emphasis}
+\subsection{Paragraphs}
+This is 1st paragraph.
+
+Leave a blank line to start a new paragraph.
+Otherwise, words will follow the last sentence. \\
+You can also use line break to start a new paragraph. (See the difference? Hint: Indentation)
+
+\subsection{Non-breaking space}
+Dr.~Smith
+% This line here is a comment. It will not be typeset in the document.
+
+\subsection{Inline Emphasis}
+\textbf{LaTex}
+\textit{italic} 
+\underline{underline} 
+\texttt{monospace} %等宽字体
+\textsc{Small Caps}
+\emph{emphasis that toggles within italic contexts}
+
+\subsection{Special characters}
+
+\begin{itemize}
+    \item \{Special characterscurly\} %{ } 
+    \item 50\% 123456\# 10\$  1\^2 G\&C \~{tilde} % % # $ ^ & ~ 
+    \item \_underscore\_ c.f. \underline{underline}
+    \item \textbackslash{} % \
+\end{itemize}
+
+\section{Title1}
+    \subsection{Subtitle}
+        \subsubsection{Subsubtitle}
+        \paragraph{Run-in heading} Text...
+
+        Text...
+
+        \paragraph{Table of contents} add \textbackslash{tableofcontents} (after \textbackslash{maketitle})
+
+\section{Lists}
+\begin{itemize}
+    \item Unordered list item
+    \item Another point
+    \item{The last point}
+\end{itemize}
+    
+\begin{enumerate}
+    \item First
+    \item Second
+\end{enumerate}
+    
+\begin{description}
+    \item[Term] Definition text
+    \item[LaTeX] A typesetting system
+\end{description}
+
+\section{Figures (Images)}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.65\textwidth]{JoinSSTIA.jpg} 
+  \caption{Join SSTIA!}
+  \label{fig:sample}
+\end{figure}
+
+As shown in Figure~\ref{fig:sample}, ...
+
+\section{Tables}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c r}
+    \hline
+    Item & Description & Price (USD)\\ \hline
+    Widget A & Basic widget & 19.99 \\
+    Widget B & Advanced widget & 29.50 \\
+    Widget C & Premium widget & 45.00 \\ \hline
+  \end{tabular}
+  \caption{Sample widget prices}
+  \label{tab:prices}
+\end{table}
+
+See Table~\ref{tab:prices} for details.
+
+\section{Cross-References}\label{crossref}
+See Section~\ref{crossref} on page~\pageref{fig:sample}.
+
+\section{Hyperlinks}
+Customize the words you'd like to show as hyperlink:
+\href{https://www.latex-project.org}{LaTeX Project}
+
+Show the original website:
+\url{https://www.overleaf.com/project}
+
+\section{Macros}
+
+\newcommand{\ProductName}{SuperWidget}
+Our \ProductName{} is great!
+
+\newcommand{\bt}[1]{\textbf{#1}} % bold text
+\bt{Important}
+
+\newcommand{\bluetext}[1]{\textcolor{blue}{#1}}
+This is \bluetext{blue text}.
+
+
+
+
+
+
+
+\end{document}

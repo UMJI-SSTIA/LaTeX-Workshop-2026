@@ -1,0 +1,185 @@
+\documentclass{article}
+
+% Packages
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{LaTeX Workshop}
+\fancyhead[R]{\thepage}
+
+% Custom macro
+\newcommand{\highlight}[1]{\textbf{#1}}
+
+\title{LaTeX Workshop Exercise Sample Answer}
+\author{SSTIA}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents % Exercise 4.1
+
+% ==================================================
+% Exercise 3.1
+% ==================================================
+
+\section{Exercise 3.1}
+
+LaTeX is a powerful tool for creating professional documents.
+It allows users to easily organize their content and control its appearance.
+
+\textbf{SSTIA} is a student association focusing on science, technology, and innovation.
+There is a \textit{100\%} possibility that you can learn new knowledge, make new friends, and even host a large event in SSTIA.
+
+% ==================================================
+% Exercise 4.1
+% ==================================================
+
+\section{Introduction}
+LaTeX is widely used for academic papers and reports.
+
+\subsection{Motivation}
+Learning LaTeX helps students create professional documents.
+
+% ==================================================
+% Exercise 5.1
+% ==================================================
+
+\section{Exercise 5.1 }
+
+Learning Plan
+\begin{enumerate}
+    \item Basic Syntax
+    \begin{itemize}
+        \item Text formatting
+        \item Sections
+    \end{itemize}
+
+    \item Advanced features
+    \begin{itemize}
+        \item Figures
+        \item Tables
+    \end{itemize}
+\end{enumerate}
+
+% ==================================================
+% Exercise 6.1
+% ==================================================
+
+\section{Exercise 6.1}
+
+\begin{figure}[ht]
+    \centering
+    % Replace example-image with your own image file if necessary
+    \includegraphics[width=0.6\textwidth]{JoinSSTIA.jpg}
+    \caption{An example image.}
+    \label{fig:sample}
+\end{figure}
+
+Figure~\ref{fig:sample} shows an example image.
+
+% ==================================================
+% Exercise 7.1
+% ==================================================
+
+\section{Exercise 7.1}
+
+Table~\ref{tab:score} shows an example three-column table.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c c c}
+        \hline
+        \textbf{Student} & \textbf{Department} & \textbf{Score} \\ 
+        \hline
+        Alice & Computer Science & 95 \\
+        Bob & Engineering & 88 \\
+        Cindy & Physics & 92 \\ 
+        \hline
+    \end{tabular}
+    \caption{Student scores}
+    \label{tab:score}
+\end{table}
+
+% ==================================================
+% Exercise 8.1
+% ==================================================
+
+\section{Cross-References}
+\label{sec:references}
+
+This section demonstrates cross-references in LaTeX.
+
+We can refer to Section~\ref{sec:references},
+Figure~\ref{fig:sample}, and Table~\ref{tab:score}.
+
+The current section can also be referenced by its page number:
+see page~\pageref{sec:references}.
+
+% ==================================================
+% Exercise 10.1
+% ==================================================
+
+\section{Hyperlinks}
+
+LaTeX provides convenient commands for adding hyperlinks.
+
+Visit the
+\href{https://www.latex-project.org}{LaTeX Project}
+for more information.
+
+You can also visit \url{https://ctan.org}.
+
+% ==================================================
+% Exercise 11.1
+% ==================================================
+
+\section{Page Layout}
+
+The page margins have been set to 1 inch using the
+\texttt{geometry} package.
+
+A custom header has also been added using the
+\texttt{fancyhdr} package.
+
+The document title appears on the left side of the header,
+while the page number appears on the right side.
+
+% ==================================================
+% Exercise 12.1
+% ==================================================
+
+\section{Using Packages}
+
+The \texttt{xcolor} package can be used to add colors to text.
+
+For example:
+
+\textcolor{blue}{This sentence is written in blue.}
+
+% ==================================================
+% Exercise 13.1
+% ==================================================
+
+\section{Custom Commands}
+
+We can define our own commands to avoid repetition.
+
+For example, we define a custom command called
+\texttt{\textbackslash highlight} in the preamble.
+
+Here is some \highlight{important information}.
+
+We can use the same command again:
+\highlight{LaTeX makes document creation easier}.
+
+\end{document}
+ 
