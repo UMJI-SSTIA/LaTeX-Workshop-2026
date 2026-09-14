@@ -1,0 +1,103 @@
+\documentclass[aspectratio=169, 11pt]{beamer}
+
+% Packages
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+% Theme
+\usetheme{Madrid}
+\usecolortheme{whale}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Title info
+\title[Short Title]{Full Presentation Title}
+\subtitle{Presentation Subtitle}
+\author[Your Name]{Your Full Name}
+\institute[Institution]{Your Institution\\Department Name}
+\date{September 11, 2026}
+
+% Auto TOC at section starts
+\AtBeginSection[]{
+  \begin{frame}{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Table of contents
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+% Section 1
+\section{Introduction}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+    \item<1-> First point
+    \item<2-> Second point with \alert<2>{highlight}
+    \item<3-> Third point
+  \end{itemize}
+\end{frame}
+
+% Section 2
+\section{Main Content}
+
+\subsection{Background}
+
+\begin{frame}{Background}
+  \begin{block}{Definition}
+    Important definition goes here.
+  \end{block}
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Left content
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Right content
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{Results}
+
+\begin{frame}{Results}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.35\textwidth]{result.jpg}
+    \caption{Results visualization}
+  \end{figure}
+\end{frame}
+
+% Section 3
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+  \begin{enumerate}
+    \item Summary point one
+    \item Summary point two
+    \item Future work
+  \end{enumerate}
+\end{frame}
+
+% Thank you slide
+\begin{frame}[plain]
+  \centering
+  \Huge Thank You!
+  
+  \vspace{1cm}
+  \normalsize
+  Questions?
+\end{frame}
+
+\end{document}
