@@ -1,0 +1,590 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% 自定义微分符号宏定义
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+
+\begin{document}
+
+\begin{center}
+    {\color[HTML]{2E86C1}\fontsize{24}{28}\selectfont\textbf{LaTeX Workshop Worksheet 2 -- Formula}}
+\end{center}
+
+Welcome to the {\color[HTML]{117A65}\textbf{LaTeX Workshop Formula Part}}.
+
+{\color[HTML]{7D3C98}\textbf{Goal:}} Learn the basics of LaTeX math, improve clarity and consistency, and practice writing formulas using professional conventions.
+
+\hrulefill
+
+\section{\color[HTML]{C0392B}Common Formulas (Quick Reference)}
+
+Here are some \textbf{commonly used formulas} in mathematics, already written in LaTeX.
+Use them as examples and modify them in the exercises.
+
+Remember to add \verb|\usepackage{amsmath}| at the beginning of your code please!
+
+\subsection{Fractions \& Roots}
+
+\verb|\[\frac{a+b}{c+d}, \quad \sqrt{x^2+y^2}, \quad \sqrt[3]{8}=2\]|
+
+\textbf{After compilation}
+
+\[
+\frac{a+b}{c+d}, \quad \sqrt{x^2+y^2}, \quad \sqrt[3]{8}=2
+\]
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Write the quadratic formula:
+\[
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\]
+
+\subsection{Exponents \& Logarithms}
+
+\begin{verbatim}
+\[
+e^2 \approx 7.389, \quad e^{i\pi}+1=0, \quad
+\log_a b = \frac{\ln b}{\ln a}
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+e^2 \approx 7.389, \quad e^{i\pi}+1=0, \quad
+\log_a b = \frac{\ln b}{\ln a}
+\]
+
+\subsection{Limits}
+
+\begin{verbatim}
+\[
+\lim_{x\to0}\frac{\sin x}{x}=1, \quad
+\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+\lim_{x\to0}\frac{\sin x}{x}=1, \quad
+\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e
+\]
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Write the classic limit:
+\[
+\lim_{x\to0}\frac{\sin x}{x}=1
+\]
+
+\subsection{Derivatives}
+
+\begin{verbatim}
+\[
+\frac{d}{dx}\sin x=\cos x, \quad
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+\]    
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+\frac{d}{dx}\sin x=\cos x, \quad
+f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+\]
+
+\subsection{Integrals}
+
+\begin{verbatim}
+\[
+\int_0^1 x^2\,dx=\frac{1}{3}, \quad
+\int_{-\infty}^{\infty}e^{-x^2}\,dx=\sqrt{\pi}
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+\int_0^1 x^2\,dx=\frac{1}{3}, \quad
+\int_{-\infty}^{\infty}e^{-x^2}\,dx=\sqrt{\pi}
+\]
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Write the integral:
+\[
+\int_0^\infty e^{-x}\,dx=1
+\]
+
+\subsection{Summations \& Products}
+
+\begin{verbatim}
+\[
+\sum_{i=1}^{n}i=\frac{n(n+1)}{2}, \quad
+\prod_{k=1}^{n}k=n!
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+\sum_{i=1}^{n}i=\frac{n(n+1)}{2}, \quad
+\prod_{k=1}^{n}k=n!
+\]
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Write the summation:
+\[
+\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}
+\]
+
+\subsection{Vectors \& Matrices}
+
+\begin{verbatim}
+\[
+\vec{v}=\begin{bmatrix}x\\y\\z\end{bmatrix},\quad
+A=\begin{Bmatrix}1&0\\0&1\end{Bmatrix},\quad
+B=\begin{pmatrix}1&2\\3&4\end{pmatrix},\quad
+C=\begin{vmatrix}1&2\\3&4\end{vmatrix}
+\]
+\end{verbatim}
+
+
+\textbf{After compilation}
+
+\[
+\vec{v}=\begin{bmatrix}x\\y\\z\end{bmatrix},\quad
+A=\begin{Bmatrix}1&0\\0&1\end{Bmatrix},\quad
+B=\begin{pmatrix}1&2\\3&4\end{pmatrix},\quad
+C=\begin{vmatrix}1&2\\3&4\end{vmatrix}
+\]
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Write the vector and the matrix:
+\[
+\vec{v}=(x,y,z),\quad 
+A=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix}
+\]
+
+\subsection{Set Operator}
+
+\begin{verbatim}
+\[
+< \quad > \quad \subset \quad \supset \quad
+\subseteq \quad \supseteq \quad \cup \quad \cap
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+< \quad > \quad \subset \quad \supset \quad
+\subseteq \quad \supseteq \quad \cup \quad \cap
+\]
+
+\subsection{Special Symbols}
+
+\begin{verbatim}
+\[
+\alpha,\ \beta,\ \gamma,\ \delta,\ \theta,\ \infty,\ 
+\forall,\ \exists,\ \nabla
+\]
+\end{verbatim}
+
+\textbf{After compilation}
+
+\[
+\alpha,\ \beta,\ \gamma,\ \delta,\ \theta,\ \infty,\ 
+\forall,\ \exists,\ \nabla
+\]
+
+\textbf{Tips}
+
+\begin{enumerate}
+    \item Check \href{https://www.overleaf.com/learn/latex/Mathematical_expressions}{Math expressions} for more detailed information.
+    \item Use \href{https://www.latexlive.com/}{Formula editor} to generate formula automatically.
+    \item Smart use of AI!
+\end{enumerate}
+
+\section{\color[HTML]{C0392B}Math Modes in LaTeX}
+
+LaTeX provides \textbf{different ways} to enter math mode.
+It is important to use the right one depending on whether you want inline or display math.
+
+\subsection{Inline Math}
+
+\begin{itemize}
+    \item \textbf{Syntax:} \verb|\(...\)| or single dollar \verb|$...$|
+    \item \textbf{Use:} Inside a sentence.
+    \item \textbf{Example:}
+\end{itemize}
+
+\begin{verbatim}
+This is inline math: \( a^2 + b^2 = c^2 \).
+Or equivalently: $a^2+b^2=c^2$.
+\end{verbatim}
+
+\textbf{After compilation}
+
+This is inline math: \( a^2 + b^2 = c^2 \).
+Or equivalently: $a^2+b^2=c^2$.
+
+In professional LaTeX (academic journals), \verb|\(...\)| is preferred because \verb|$...$| is TeX legacy and may cause spacing issues.
+
+\subsection{Display Math}
+
+\begin{itemize}
+    \item \textbf{Syntax:} \verb|\[...\]| or double dollars \verb|$$...$$|
+    \item \textbf{Use:} Standalone equation, centered, without numbering.
+    \item \textbf{Example:}
+\end{itemize}
+
+\begin{verbatim}
+The mass-energy equation below reveals the equivalence relationship
+between mass and energy: \[ E = mc^2 \]
+\end{verbatim}
+
+\textbf{After compilation}
+
+The mass-energy equation below reveals the equivalence relationship
+between mass and energy: \[ E = mc^2 \]
+
+\subsection{Numbered Equations}
+
+\begin{itemize}
+    \item \textbf{Syntax:} \texttt{equation} environment
+    \item \textbf{Use:} To number a formula automatically.
+    \item \textbf{Example:}
+\end{itemize}
+
+\begin{verbatim}
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+\begin{equation}
+E = mc^2
+\end{equation}
+\end{verbatim}
+
+\textbf{After compilation}
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+\begin{equation}
+E = mc^2
+\end{equation}
+
+\subsection{Multi-line Alignment}
+
+\begin{itemize}
+    \item \textbf{Syntax:} \texttt{align} (from \textbf{amsmath})
+    \item \textbf{Use:} Align multi-step derivations at $=$ or other operators.
+    \item \textbf{Example:}
+\end{itemize}
+
+\begin{verbatim}
+\begin{align}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{align}
+
+\begin{align}
+f(x) &= (x+1)^2 \notag \\
+     &= x^2 + 2x + 1
+\end{align}
+
+\begin{equation}
+\begin{aligned}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{aligned}
+\end{equation}
+\end{verbatim}
+
+\textbf{After compilation}
+\begin{align}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{align}
+
+\begin{align}
+f(x) &= (x+1)^2 \notag \\
+     &= x^2 + 2x + 1
+\end{align}
+
+\begin{equation}
+%\notag
+\begin{aligned}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{aligned}
+\end{equation}
+
+\textbf{\color[HTML]{CA6F1E}Exercises}
+
+Use the \textbf{align environment} to typeset
+
+\begin{align}
+f(x)&=(x+1)^3\\
+&=x^3+3x^2+3x+1
+\end{align}
+
+\section{\color[HTML]{C0392B}Best Reminder \& Tips}
+
+\subsection{Multi-line Alignment: \texttt{align} vs \texttt{aligned}}
+
+\paragraph{align}
+
+\begin{itemize}
+    \item Requires \texttt{amsmath} package: \verb|\usepackage{amsmath}|
+    \item Standalone multi-line equations with automatic numbering
+    \item Example:
+\end{itemize}
+
+\begin{verbatim}
+\begin{align}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{align}
+\end{verbatim}
+
+\textbf{Notes:}
+\begin{itemize}
+    \item Use \verb|&| to indicate alignment points (typically at \verb|=|)
+    \item Use \verb|\nonumber| or \verb|\notag| to remove numbering on specific lines
+    \item Use \verb|\label{}| for cross-references with \verb|\eqref{}|
+\end{itemize}
+
+\paragraph{aligned}
+\begin{itemize}
+    \item Also requires \texttt{amsmath}, but must be inside another math environment
+    \item Does not provide numbering on its own
+    \item Example:
+\end{itemize}
+
+\begin{verbatim}
+\[
+\begin{aligned}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{aligned}
+\]
+\end{verbatim}
+
+\textbf{Notes:}
+\begin{itemize}
+    \item Only allowed in math environment. (Need \verb|\begin{equation}| or \verb|\[...\]|)
+    \item Ideal for embedding aligned equations inline or inside display math
+    \item For numbering, wrap in \texttt{equation} environment:
+\end{itemize}
+
+\begin{verbatim}
+\begin{equation}
+\notag
+\begin{aligned}
+f(x) &= (x+1)^2 \\
+     &= x^2 + 2x + 1
+\end{aligned}
+\end{equation}
+\end{verbatim}
+
+\subsection{Use \texttt{\textbackslash mathrm\{d\}x} for Differentials}
+
+\begin{itemize}
+    \item Differential $d$ is an operator, not a variable; it should be upright.
+    \item Example:
+\end{itemize}
+
+\[
+\int_0^1 x^2\,\mathrm{d}x
+\]
+
+\begin{verbatim}
+\[\int_0^1 x^2 \, \mathrm{d}x\]
+\end{verbatim}
+
+\textbf{Optional macro:}
+
+\[
+\int_0^1 x^2\,\dif x
+\]
+
+\begin{verbatim}
+\newcommand{\dif}{\mathop{}\!\mathrm{d}}
+\[\int_0^1 x^2\,\dif x\]
+\end{verbatim}
+
+\subsection{Control Spacing}
+
+\begin{center}
+\begin{tabular}{c l l}
+\toprule
+Command & Width & Example \\
+\midrule
+\verb|\,| & thin space (1/6 quad) & $a\,b$ \\
+\verb|\:| & medium space (2/9 quad) & $a\:b$ \\
+\verb|\;| & thick space (5/18 quad) & $a\;b$ \\
+\verb|\!| & negative thin space (-1/6 quad) & $a\!b$ \\
+\verb|\quad| & 1 em (width of ``M'') & $a\quad b$ \\
+\verb|\qquad| & 2 em & $a\qquad b$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{1. Multiplication}
+
+Prefer \verb|\cdot| or thin space \verb|\,| over implicit juxtaposition when variables are next to numbers.
+
+\[
+2\,x \quad \text{or} \quad 2\cdot x
+\]
+
+\begin{verbatim}
+\[
+2\,x \quad \text{or} \quad 2\cdot x
+\]
+\end{verbatim}
+
+\textbf{2. Function Application}
+
+Always put a thin space after functions before arguments for clarity.
+
+\[
+\sin\,x,\quad \log\,n
+\]
+
+\begin{verbatim}
+\[
+\sin\,x,\quad \log\,n
+\]
+\end{verbatim}
+
+\textbf{3. Fractions}
+
+Use small spaces around \verb|\frac| if needed for readability.
+
+\[
+\frac{a}{b}\,x
+\]
+
+\begin{verbatim}
+\[
+\frac{a}{b}\,x
+\]
+\end{verbatim}
+
+\textbf{4. Operators in Limits/Integrals}
+
+Add thin or medium space around $d$ in integrals.
+
+\[
+\int_0^1 f(x)\,\mathrm{d}x
+\]
+
+\begin{verbatim}
+\[
+\int_0^1 f(x)\,\mathrm{d}x
+\]
+\end{verbatim}
+
+\textbf{5. Negative Space}
+
+Use \verb|\!| sparingly to reduce awkward gaps in products or superscripts.
+
+\[
+x^{n\!+1}
+\]
+
+\begin{verbatim}
+\[
+x^{n\!+1}
+\]
+\end{verbatim}
+
+To see more detailed information in section 7 of this webpage:
+\href{https://latex-tutorial.com/latex-space/}{latex\_space}.
+
+\subsection{Place Limits Explicitly}
+
+\begin{itemize}
+    \item Inline math usually puts limits to the right:\, \(\sum_{i=1}^{n}i\)
+    
+    \item Use \verb|\limits| to force display-style limits inline:
+    \(\sum\limits_{i=1}^{n}i\)
+    
+    \item Or \verb|\displaystyle|:
+    \(\displaystyle\sum_{i=1}^{n}i\)
+\end{itemize}
+
+\begin{verbatim}
+\(\sum\limits_{i=1}^{n}i\)
+\end{verbatim}
+
+\begin{verbatim}
+\(\displaystyle\sum_{i=1}^{n}i\)
+\end{verbatim}
+
+\subsection{Use \texttt{\textbackslash label} and \texttt{\textbackslash ref} for Numbering}
+
+\begin{itemize}
+    \item Automatic numbering and cross-references
+    \item Example:
+\end{itemize}
+
+\begin{equation}
+\label{eq:problem1_quadratic}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+As shown in equation \eqref{eq:problem1_quadratic}, ...
+
+\begin{verbatim}
+\begin{equation}
+\label{eq:problem1_quadratic}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+As shown in equation \eqref{eq:problem1_quadratic}, ...
+\end{verbatim}
+
+\begin{itemize}
+    \item \verb|\ref{eq:problem1_quadratic}| $\rightarrow$ prints just the number: 1.
+    \item \verb|\eqref{eq:problem1_quadratic}| $\rightarrow$ prints the number with parentheses: (1).
+\end{itemize}
+
+\section{\color[HTML]{2874A6}Other Related Materials}
+
+\begin{enumerate}
+    \item \href{https://www.tablesgenerator.com/}{AutoTableGenerate}
+    \item \href{https://www.ctan.org/}{The Comprehensive TeX Archive Network}
+\end{enumerate}
+
+\end{document}

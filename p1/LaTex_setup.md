@@ -162,5 +162,5 @@ The generated PDF can be viewed directly in VS Code.
 | **Customization**         | Limited                                  | Highly customizable                                       |
 | **Package management**    | Managed by Overleaf                      | User-managed                                              |
 | **Cross-device access**   | ⭐⭐⭐⭐⭐ Excellent                          | ⭐⭐⭐ Requires environment setup                            |
-| **Multiple user**   | ❌ | ✅ |
+| **Multiple user**   | ✅ | ❌ |
 
